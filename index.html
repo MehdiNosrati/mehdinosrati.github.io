@@ -1,106 +1,128 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<title>MehdiNosrati</title>
 	<meta charset="utf-8">
-	<title>خانه | سامانه جامع استارت آپ</title>
-	<!--style sheets-->
-	<link rel="stylesheet" href="assets/css/public/animate.css">
-	<link rel="stylesheet" href="assets/css/public/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="icon" href="assets/img/favicon.ico">
 	
-	
-	<link rel="stylesheet" type="text/css" href="assets/css/left_taskbar/left_taskbar.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/right_bar/right_bar.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/topbar&circles/top_bar_circles.css">
-	
-	<!--font-->
-	<link rel="stylesheet" type="text/css" href="assets/css/font/yekan.css">
-	<!--material icons-->
-	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-	<link rel="stylesheet" type="text/css" href="assets/css/posts/pStyle.css">
-
 </head>
-<body>
-
-	<!--top bar and top circles-->
-	<div class="top-bar animated fadeInDown">
-		
-		<i class="material-icons" id="taskbar-btn" onclick="funcTask()" style="font-size: 2em; padding: 5px; background-color: #00ace6; border-radius: 5px; margin: 20px; margin-left: 10px; cursor: pointer;">menu</i>	
-		
-		<div class="circles col-xs-7 col-xs-offset-4">
-			<span class="circle">
-				<img src="assets/img/search.png" class="circle-icon search" onclick="funcGrow()">
-				<input type="search" name="search-box" class="search-box" id="grow">
-			</span>
-			<span class="circle"><img src="assets/img/trend.png" class="circle-icon"></span>
-			<span class="circle" id="notif">
-				<img src="assets/img/notification.png" class="circle-icon" onclick="funcNotif()" id="notification-icon">
-				<div id="notification">
-					<p class="arrow-up" id="arrow"></p>
-				</div>
-			</span>
-			<span class="circle"><img src="assets/img/new.png" class="circle-icon"></span>	
-		</div>	
-
-		<div class="account" >
-			<img src="assets/img/pp.png" class="pp">
-			<h4 class="pp-name" onclick="funcProf()">مهدی نصرتی</h4>
-				<div id="accounts">
-					<img src="assets/img/pp.png" class="pp-extend">
-					<h4 class="pp-name-extend">مهدی نصرتی</h4><br />
-					<img src="assets/img/pp.png" class="pp-extend">
-					<h4 class="pp-name-extend">آرمان رایان شریف</h4>
-					<img src="assets/img/pp.png" class="pp-extend">
-					<h4 class="pp-name-extend">دانشگاه امیرکبیر</h4>
-					
-				</div>
-					
-		</div>
+<body onscroll="bgc()">
+	
+	<div class="top-menu" id="tp">
+		<a href="#target-ex"><h3 class="exp">EXPERIENCES</h3></a>
+		<a href="#target-skill"><h3 class="exp">SKILLS</h3></a>
+		<a href="#target-about"><h3 class="exp">ABOUT</h3></a>
+		<a href="#target-conact"><h3 class="exp">CONTACT</h3></a>
+		<a href="http://www.github.com/mehdinosrati" target="_blank"><h3 class="exp">GitHub Profile</h3></a>
+		<a href="http://www.gitlab.com/mehdinosratisahlan" target="_blank"><h3 class="exp">GitLab Profile</h3></a>
 	</div>
-
-	<!--right bar-->
-	<div class="right-bar-container animated fadeInRight">
-		<div class="btn-container" style="border-radius: 10px 0px 0px 0px;"><img src="assets/img/home.png" class="right-buttons" ><p class="hdn animated fadeInRight">home</p></div>	
-		<div class="btn-container"><img src="assets/img/profile.png" class="right-buttons"><p class="hdn animated fadeInRight">profile</p></div>
-		<div class="btn-container"><img src="assets/img/top.png" class="right-buttons"><p class="hdn animated fadeInRight" style="padding-right: 10px;">Top 10</p></div>
-		<div class="btn-container" style="border-radius: 0px 0px 0px 10px;"><img src="assets/img/log-out.png" class="right-buttons"><p class="hdn animated fadeInRight" style="padding-right: 10px; border: none;">Log out</p></div>			
+	<div class="profile">
+		<div class="border"></div>
+		<img src="assets/img/pp.jpg" class="pp">
+		<h3 class="p-name">Mehdi Nosrati</h3>
 	</div>
-
-	<!--task bar - left-->
-		<div class="task-bar-container animated fadeInLeft" id="taskbar">
-				
-		</div>
-
-
-
-	<!--posts-->
-	<div class="posts-container col-xs-6 col-xs-offset-3 animated fadeInUp">
-		<div class="post">
-			<div class="post-top-bar">
-				<img src="assets/img/pp.png" class="post-pp">
-				<h4 class="pp-name post-p-name">مهدی نصرتی</h4>
-				<p class="date-time">شنبه، 3 اردیبهشت، ساعت 15:13:04</p>
-			</div>
-			<div class="attachments">
-				<i class="material-icons photo-gallery-arrows" id="galley-left">arrow_left</i>
-				<img src="assets/img/1.png" class="photo">
-				<img src="assets/img/2.bmp" class="photo">
-				<img src="assets/img/3.png" class="photo">
-				<img src="assets/img/4.png" class="photo">
-				<i class="material-icons photo-gallery-arrows" id="gallery-right">arrow_right</i>
-			</div>
-			<div class="post-content">
-				<p class="post-text">متن پست</p>
+	<div id="target-ex" style="position: relative; bottom: 30px"></div>
+	<div class="experience col-xs-6 col-xs-offset-3" id="EXPERIENCES">
+		<h2>
+		Front-end Web developer at <a href="http://www.armankadeh.ir" target="_blank">ArmanRayan Co.</a> since 2017, Tehran.
+		</h2>
+		<h2>
+		Computer technical guide at ShahidMadani 2 highschool, Tabriz. 
+		</h2>
+	</div>
+	
+	<div id="target-skill" style="position: relative; bottom: 30px;"></div>
+	<div class="skills">
+		<h2>Skills on programming languages:</h2>
+		
+		<div class="c">
+			<h3 class="skl">C/C++</h3>
+			<div class="s-container">
+				<div class="s"></div>
 			</div>
 		</div>
+		<div class="java">
+			<h3 class="skl">Java</h3>
+			<div class="s-container">
+				<div class="s"></div>
+			</div>
+		</div>
+		<div class="js">
+			<h3 class="skl">JS</h3>
+			<div class="s-container">
+				<div class="s"></div>
+			</div>
+		</div>
+		<div class="html">
+			<h3 class="skl">HTML</h3>
+			<div class="s-container">
+				<div class="s"></div>
+			</div>
+		</div>
+		<div class="css">
+			<h3 class="skl">CSS</h3>
+			<div class="s-container">
+				<div class="s"></div>
+			</div>
+		</div>
+		<div class="csharp">
+			<h3 class="skl">C#</h3>
+			<div class="s-container">
+				<div class="s"></div>
+			</div>
+		</div>
+		<div class="jquery">
+			<h3 class="skl">JQUERY</h3>
+			<div class="s-container">
+				<div class="s"></div>
+			</div>
+		</div>
+		<div class="sql">
+			<h3 class="skl">SQL</h3>
+			<div class="s-container">
+				<div class="s"></div>
+			</div>
+		</div>
+		
 		
 	</div>
-
-
+	<div id="target-about" style="position: relative; bottom: 35px;"></div>
+	<div class="about">
+		<h2 style="font-size: 2em;">About me</h2>
+		<p style="direction: ltr; margin: 40px;position: relative; top: 30px;font-size: 1.3em;text-indent: 20px;">
+		    Hi there!<br>
+			I am Mehdi Nosrati Sahlan, born in Tabriz,Iran on 1999 june 15th.<br>
+		 	I've passed my elemntary education at Shakiba School.Then applied for the Sampad school which 
+			was a really perfect one. after university enterance exam I've been passed in AmirKabir university of technology in Computer engineering and information technology field.Started to learn several programming languages as mentioned. the only reason for living is LEARNING!<br>
+			<p style="text-align: center; direction: ltr;font-size: 1.5em"><b>LEARN, FORGET, PLAY :)</b></p>
+		</p>
+	
+	</div>
+	<div id="target-conact"></div>
+	<div class="contact">
+		<h2 style="font-size: 2em;">Contact Me</h2>
+		<h2>Adress</h2>
+		<p style="text-indent: 30px; direction: ltr;margin: 20px;position: relative; top: 20px;font-size: 1.2em;">NO. 21 , BehAfarin St. , KarimKhanZand St. , Tehran , Iran</p>
+		<h2>Mobile NO.</h2>
+		<p style="text-indent: 30px; direction: ltr;margin: 20px;position: relative; top: 20px;font-size: 1.2em;">(+98)922 432 8474</p>
+		<h2>Social</h2>
+		<a href="http://t.me/em_ns" target="_blank"><img src="assets/img/tele.jpg" class="soc" style="margin-left: 80px;"></a>
+		<a href="http://instagram.com/7mns8" target="_blank"><img src="assets/img/insta.png" class="soc"></a>
+		<img src="assets/img/bale.png" style="border-radius: 0;" class="soc">
+		<a href="https://www.linkedin.com/in/mehdi-nosratisahlan-65961215a/" target="_blank"><img src="assets/img/linkedin.png" class="soc"></a>
+	</div>
 		
-	<!--scripts-->
-	<script type="text/javascript" src="assets/js/public/bootstrap.min.js"></script>
-	<script type="text/javascript" src="assets/js/public/jquery-3.1.1.min.js"></script>
-	<script type="text/javascript" src="assets/js/circles/main.js"></script>
-	<script type="text/javascript" src="assets/js/taskbar/main.js"></script>
+		
+		
+	
+	<div class="foter">
+				<p style="direction: ltr; text-align: center; position: relative; top: 20px;color: snow">All Rights reserved. Published by <a href="assets/img/favicon.ico" style="color: snow" target="_blank">@MnS</a></p>
+		</div>
+
+	
+	<script type="text/javascript" src="assets/js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="assets/js/main.js"></script>
 </body>
+	
 </html>
