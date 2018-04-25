@@ -1,1 +1,2 @@
-# mehdinosrati.github.io
+# startups
+a website for managing startups

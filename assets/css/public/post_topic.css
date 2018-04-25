@@ -1,0 +1,26 @@
+
+.l_t_r {
+    direction: ltr;
+}
+
+.left_column {
+    float: left;
+    top: 150px;
+    left: 20px;
+    width: 300px;
+}
+
+.overflow-ellipsis {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+.fh-breadcrumb-v2{
+    min-height: 100px;
+    margin: 0 -15px;
+    position: relative;
+}
