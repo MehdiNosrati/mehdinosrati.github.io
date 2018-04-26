@@ -1,3 +1,6 @@
+
+
+
 /* scrollbar */
 ::-webkit-scrollbar {
     width: 7px;
@@ -84,12 +87,7 @@ body{
 	
 	
 }
-.pp:hover{
-	animation: none;
-	border: none;
-	width: 203px;
-	border: 2px solid white;
-}
+
 @keyframes border-grow {
 	0%{
 		border: 5px solid white;
@@ -303,4 +301,51 @@ a:active{
 	background-color: #595959;
 	width: 100%;
 	margin-top: 20px;
+}
+
+@media only screen and (max-width: 600px){
+	.col-xs-6{
+		width: 90%;
+	}
+	.col-xs-offset-3{
+		margin-right: 5%;
+	}
+	.exp{
+		margin: 17px 8px;
+		font-size: 1.1em;
+	}
+	.experience{
+		height: 250px;
+	}
+	.skills{
+		height: 800px;
+	}
+	.s-container{
+		width: 50%;
+	}
+	.about{
+		height: 590px;
+	}
+	.contact{
+		height: 540px;
+	}
+	.soc{
+		left: 0px;
+		margin-right: 10px;
+	}
+	.hiden{
+		display: none;
+	}
+	
+}
+@media only screen and (max-width: 330px){
+	.exp{
+		margin: 17px 2px;
+	}
+	.experience{
+		height: 320px;
+	}
+	.about{
+		height: 660px;
+	}
 }
