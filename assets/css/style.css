@@ -51,7 +51,7 @@ body{
 	display: inline-block;
 	transition: all .5s ease-out;
 	cursor: pointer;
-	padding:5px;
+	padding:3px;
 	border-radius: 5px;
 	color: snow;
 	margin-right: 90px;
@@ -311,8 +311,9 @@ a:active{
 		margin-right: 5%;
 	}
 	.exp{
-		margin: 17px 3px;
+		margin: 17px 2px;
 		font-size: 1em;
+		margin-right: 2px;
 	}
 	.experience{
 		height: 280px;
@@ -341,6 +342,7 @@ a:active{
 @media only screen and (max-width: 330px){
 	.exp{
 		margin: 17px 2px;
+		margin-right: 2px;
 	}
 	.experience{
 		height: 350px;
