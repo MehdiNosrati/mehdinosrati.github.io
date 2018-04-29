@@ -27,6 +27,7 @@ html *{
 	margin:0;
 	direction: rtl;
 	font-family: monospace;
+	text-align: justify;
 }
 body{
 	background-image: url("bg.png");
