@@ -352,3 +352,13 @@ a:active{
 		height: 660px;
 	}
 }
+.samples{
+position: relative;
+	width: 50%;
+	height: 300px;
+	background-color: rgba(250,250,250,0.8);
+	margin-right: 25%;
+	border-radius: 5px;
+	margin-top: 20px;
+	direction: ltr;
+}
