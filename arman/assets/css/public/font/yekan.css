@@ -1,0 +1,16 @@
+@font-face {
+    font-family: yekan;
+    src: url("irsans.ttf");
+         
+    
+    }
+
+html * {
+    font-family: yekan;
+    margin: 0px;
+}
+
+
+
+
+

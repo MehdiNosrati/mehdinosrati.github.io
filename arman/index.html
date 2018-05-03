@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>خانه | سامانه جامع استارت آپ</title>
+	<!--style sheets-->
+	<link rel="stylesheet" href="assets/css/public/animate.css">
+	<link rel="stylesheet" href="assets/css/public/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/index_files/left_taskbar/left_taskbar.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/public/right_bar/right_bar.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/index_files/topbar&circles/top_bar_circles.css">
+	<!--font-->
+	<link rel="stylesheet" type="text/css" href="assets/css/public/font/yekan.css">
+	<!--material icons-->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" type="text/css" href="assets/css/index_files/posts/pStyle.css">
+
+</head>
+
+<body>
+
+	<!--top bar and top circles-->
+	<div class="top-bar animated fadeInDown">
+
+		<i class="material-icons" id="taskbar-btn" onclick="funcTask()" style="font-size: 2em; padding: 5px; background-color: #00ace6; border-radius: 5px; margin: 20px; margin-left: 10px; cursor: pointer;">menu</i>
+
+		<div class="circles col-xs-7 col-xs-offset-4">
+			<span class="circle">
+				<img src="assets/img/search.png" class="circle-icon search" onclick="funcGrow()">
+				<input type="search" name="search-box" class="search-box" id="grow">
+			</span>
+			<span class="circle"><img src="assets/img/trend.png" class="circle-icon"></span>
+			<span class="circle" id="notif">
+				<img src="assets/img/notification.png" class="circle-icon" onclick="funcNotif()" id="notification-icon">
+				<div id="notification">
+					<p class="arrow-up" id="arrow"></p>
+				</div>
+			</span>
+			<span class="circle">
+				<img src="assets/img/new.png" class="circle-icon" onclick="newPost()">			
+			</span>
+		</div>
+
+		<div class="account">
+			<img src="assets/img/pp.png" class="pp">
+			<h4 class="pp-name" onclick="funcProf()">مهدی نصرتی</h4>
+			<div id="accounts">
+				<img src="assets/img/pp.png" class="pp-extend">
+				<h4 class="pp-name-extend">مهدی نصرتی</h4><br />
+				<img src="assets/img/pp.png" class="pp-extend">
+				<h4 class="pp-name-extend">آرمان رایان شریف</h4>
+				<img src="assets/img/pp.png" class="pp-extend">
+				<h4 class="pp-name-extend">دانشگاه امیرکبیر</h4>
+
+			</div>
+
+		</div>
+	</div>
+
+	<!--right bar-->
+	<div class="right-bar-container animated fadeInRight">
+		<div class="btn-container" style="border-radius: 10px 0px 0px 0px;"><img src="assets/img/home.png" class="right-buttons">
+			<p class="hdn animated fadeInRight">home</p>
+		</div>
+		<div class="btn-container"><img src="assets/img/profile.png" class="right-buttons">
+			<p class="hdn animated fadeInRight">profile</p>
+		</div>
+		<div class="btn-container"><img src="assets/img/top.png" class="right-buttons">
+			<p class="hdn animated fadeInRight" style="padding-right: 10px;">Top 10</p>
+		</div>
+		<div class="btn-container" style="border-radius: 0px 0px 0px 10px;"><img src="assets/img/log-out.png" class="right-buttons">
+			<p class="hdn animated fadeInRight" style="padding-right: 10px; border: none;">Log out</p>
+		</div>
+	</div>
+
+	<!--task bar - left-->
+	<div class="task-bar-container animated fadeInLeft" id="taskbar">
+
+	</div>
+
+
+
+	<!--posts-->
+
+
+	<div class="posts-container col-xs-6 col-xs-offset-3 animated fadeInUp">
+		<div class="new-post-container" id="new-post-compose">
+			<div class="post-info-container">
+			<img src="assets/img/pp.png" class="pp-new-post">
+				<h3 class="pp-name-new-post">نام کاربری ناشر</h3>
+				<h4 class="for-who">انتشار برای</h4><span class="choose" onclick="funcChoose()">انتخاب کنید</span>
+				<div style="direction: ltr"><img src="assets/img/x.png" class="close-np" onclick="newPost()"></div>
+				<div class="for-who-dropdown" id="choose-drop-down" style="position: absolute;">
+								<label class="container">همه
+								  <input type="checkbox" checked="checked">
+								  <span class="checkmark"></span>
+								</label>
+
+								<label class="container">دوستان
+								  <input type="checkbox">
+								  <span class="checkmark"></span>
+								</label>
+
+								<label class="container">استارت آپ 1
+								  <input type="checkbox">
+								  <span class="checkmark"></span>
+								</label>
+
+								<label class="container">شرکت 1
+								  <input type="checkbox">
+								  <span class="checkmark"></span>
+								</label>
+
+				</div>
+				
+			</div>
+			<textarea rows="10" cols="80" placeholder="متن پست..." class="np-input-text"></textarea>
+
+			<div class="send"><p>ارسال پست</p></div>
+			<img src="assets/img/attach.png" class="attch-btn">
+
+
+		</div>
+		<div class="post">
+			<div class="post-top-bar">
+				<img src="assets/img/pp.png" class="post-pp">
+				<h4 class="pp-name post-p-name">مهدی نصرتی</h4>
+				<p class="date-time">شنبه، 3 اردیبهشت، ساعت 15:13:04</p>
+			</div>
+			<div class="attachments">
+				<h3>محل قرارگیری محتوای چندرسانه ای</h3>
+			</div>
+			<div class="post-content">
+				<p class="post-text">متن پست<br><br><br><br><br><br></p>
+			</div>
+			<div class="post-actions">
+				<div class="action-container"><img src="assets/img/like.png" class="post-action-img">
+					<h3 class="post-action-name">Like</h3>
+				</div>
+				<div class="action-container"><img src="assets/img/dislike.png" class="post-action-img">
+					<h3 class="post-action-name">Dislike</h3>
+				</div>
+				<div class="action-container"><img src="assets/img/chat.png" class="post-action-img">
+					<h3 class="post-action-name">Comment</h3>
+				</div>
+				<div class="action-container"><img src="assets/img/share.png" class="post-action-img">
+					<h3 class="post-action-name">Share</h3>
+				</div>
+
+			</div>
+		</div>
+		<div class="post">
+			<div class="post-top-bar">
+				<img src="assets/img/pp.png" class="post-pp">
+				<h4 class="pp-name post-p-name">مهدی نصرتی</h4>
+				<p class="date-time">شنبه، 3 اردیبهشت، ساعت 15:13:04</p>
+			</div>
+			<div class="attachments">
+				<h3>محل قرارگیری محتوای چندرسانه ای</h3>
+			</div>
+			<div class="post-content">
+				<p class="post-text">متن پست<br><br><br><br><br><br></p>
+			</div>
+			<div class="post-actions">
+				<div class="action-container"><img src="assets/img/like.png" class="post-action-img">
+					<h3 class="post-action-name">Like</h3>
+				</div>
+				<div class="action-container"><img src="assets/img/dislike.png" class="post-action-img">
+					<h3 class="post-action-name">Dislike</h3>
+				</div>
+				<div class="action-container"><img src="assets/img/chat.png" class="post-action-img">
+					<h3 class="post-action-name">Comment</h3>
+				</div>
+				<div class="action-container"><img src="assets/img/share.png" class="post-action-img">
+					<h3 class="post-action-name">Share</h3>
+				</div>
+
+			</div>
+		</div>
+		<div class="post">
+			<div class="post-top-bar">
+				<img src="assets/img/pp.png" class="post-pp">
+				<h4 class="pp-name post-p-name">مهدی نصرتی</h4>
+				<p class="date-time">شنبه، 3 اردیبهشت، ساعت 15:13:04</p>
+			</div>
+			<div class="attachments">
+				<h3>محل قرارگیری محتوای چندرسانه ای</h3>
+			</div>
+			<div class="post-content">
+				<p class="post-text">متن پست<br><br><br><br><br><br></p>
+			</div>
+			<div class="post-actions">
+				<div class="action-container"><img src="assets/img/like.png" class="post-action-img">
+					<h3 class="post-action-name">Like</h3>
+				</div>
+				<div class="action-container"><img src="assets/img/dislike.png" class="post-action-img">
+					<h3 class="post-action-name">Dislike</h3>
+				</div>
+				<div class="action-container"><img src="assets/img/chat.png" class="post-action-img">
+					<h3 class="post-action-name">Comment</h3>
+				</div>
+				<div class="action-container"><img src="assets/img/share.png" class="post-action-img">
+					<h3 class="post-action-name">Share</h3>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+
+
+
+	<!--scripts-->
+	<script type="text/javascript" src="assets/js/public/bootstrap.min.js"></script>
+	<script type="text/javascript" src="assets/js/public/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="assets/js/circles/main.js"></script>
+	<script type="text/javascript" src="assets/js/taskbar/main.js"></script>
+	<script type="text/javascript" src="assets/js/posts/main.js"></script>
+</body>
+
+</html>
