@@ -1,0 +1,16 @@
+@font-face {
+    font-family: material-icons;
+    src: url("Google Material Design Font V2.2.ttf");
+         
+    
+    }
+
+html * {
+    font-family: yekan;
+    margin: 0px;
+}
+
+
+
+
+
