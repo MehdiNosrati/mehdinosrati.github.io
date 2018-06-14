@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			درباره | پروفایل
+		</title>
+		<link rel="stylesheet" href="assets/css/public/animate.css">
+		<link rel="stylesheet" href="assets/css/index_files/topbar&circles/top_bar_circles.css">
+		<link rel="stylesheet" href="assets/css/public/bootstrap.min.css">
+		<link rel="stylesheet" href="assets/css/public/w3.css">
+		
+		<link rel="stylesheet" href="assets/css/profile/profile.css">
+		<link rel="stylesheet" href="assets/css/index_files/left_taskbar/left_taskbar.css">
+		<link rel="stylesheet" href="assets/css/index_files/posts/pStyle.css">
+		<link rel="stylesheet" href="assets/css/profile/about.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/public/right_bar/right_bar.css">
+		<!--fonts-->
+		<link rel="stylesheet" href="assets/css/public/font/matertial-icons.css">
+		<link rel="stylesheet" href="assets/css/public/font/yekan.css">
+	</head>
+	<body>
+		<div class="circles animated fadeInDownBig">
+			<span class="circle">
+				<img src="assets/img/search.png" class="circle-icon search" onclick="funcGrow()">
+				<input type="search" name="search-box" class="search-box" id="grow">
+			</span>
+			<span class="circle"><img src="assets/img/trend.png" class="circle-icon"></span>
+			<span class="circle" id="notif">
+				<img src="assets/img/notification.png" class="circle-icon" onclick="funcNotif()" id="notification-icon">
+				<div id="notification">
+					<p class="arrow-up" id="arrow"></p>
+				</div>
+			</span>
+			
+		</div>
+	<div class="top-bar animated fadeInDown ">
+
+		<div class="material-icons" id="taskbar-btn" onclick="funcTask()" style="display: inline; font-size: 2em; padding: 0px 5px; background-color: #00ace6; border-radius: 5px; margin: 20px; margin-left: 10px; cursor: pointer; font-family: material-icons;">menu</div>
+
+
+		<div class="account">
+			<img src="assets/img/pp.png" class="pp">
+			<h4 class="pp-name" onclick="funcProf()">مهدی نصرتی</h4>
+			<div id="accounts">
+				<img src="assets/img/pp.png" class="pp-extend">
+				<h4 class="pp-name-extend">مهدی نصرتی</h4><br />
+				<img src="assets/img/pp.png" class="pp-extend">
+				<h4 class="pp-name-extend">آرمان رایان شریف</h4>
+				<img src="assets/img/pp.png" class="pp-extend">
+				<h4 class="pp-name-extend">دانشگاه امیرکبیر</h4>
+
+			</div>
+
+		</div>
+	</div>
+	<div class="profile-section row">
+    <div id="prof_top" class="prof-section-image">
+        <img src="assets/img/a4.jpg" class="img-circle circle-border m-b-md" alt="profile">
+    </div>
+    <button type="button" class="btn btn-w-m btn-link">amir mohammad rajaee</button>
+    <div class="prof-butt-conta">
+        <button id="#timeline" type="button" class="btn btn-w-m btn-default" onclick="showTimeLine()"
+                style="margin:0 5px">Timeline
+        </button>
+        <button id="#relation" type="button" class="btn btn-w-m btn-default" onclick="showRelations()"
+                style="margin:0 5px">Relations
+        </button>
+        <button id="#about" type="button" class="btn btn-w-m btn-default" style="margin:0 5px">About</button>
+        <button id="#editprofile" type="button" class="btn btn-w-m btn-default" style="margin:0 5px">Edit Profile
+        </button>
+        <button id="#more" type="button" class="btn btn-w-m btn-default" style="margin:0 10px">....</button>
+    </div>
+</div>
+
+<!--right bar-->
+	<div class="right-bar-container animated fadeInRightBig">
+		<div class="btn-container" style="border-radius: 10px 0px 0px 0px;"><img src="assets/img/home.png" class="right-buttons">
+			<p class="hdn animatedr fadeInRight">home</p>
+		</div>
+		<a href="profile-about.html" class="right-bar-link"><div class="btn-container"><img src="assets/img/profile.png" class="right-buttons">
+			<p class="hdn animatedr fadeInRight">profile</p>
+		</div></a>
+		<div class="btn-container"><img src="assets/img/top.png" class="right-buttons">
+			<p class="hdn animatedr fadeInRight" style="padding-right: 10px;">Top 10</p>
+		</div>
+		<div class="btn-container" style="border-radius: 0px 0px 0px 10px;"><img src="assets/img/log-out.png" class="right-buttons">
+			<p class="hdn animatedr fadeInRight" style="padding-right: 10px; border: none;">Log out</p>
+		</div>
+	</div>
+
+
+	<!--task bar - left-->
+	<div class="task-bar-container animated fadeInLeft" id="taskbar">
+
+	</div>
+	
+	
+	<!--about-->
+		<div class="about">
+	<div class="w3-card  life-route" id="lf-rt">
+		<h1 class="w3-container route-head">مسیر زندگی</h1>
+		<p class="more" onclick="document.getElementById('more-content').style.display='block'">grain</p>
+		<p class="minimize" id="minim">remove</p>
+		<!-- life route-->
+		<div class="point"><p class="event-text"></p></div>
+		<div class="point" id="p1"><p class="event-text"></p></div>
+		<div class="point" id="p2"><p class="event-text"></p></div>
+		<div class="point" id="p3"><p class="event-text"></p></div>
+		<div class="point" id="p4"><p class="event-text"></p></div>
+		<div class="point" id="p5"><p class="event-text"></p></div>
+		<div class="point" id="p6"><p class="event-text"></p></div>
+		<div class="point" id="p7"><p class="event-text"></p></div>
+		<div class="point" id="p8"><p class="event-text"></p></div>
+		<div class="point" id="p9"><p class="event-text"></p></div>
+		<div class="point" id="p10"><p class="event-text"></p></div>
+		<div class="point" id="p11"><p class="event-text"></p></div>
+		<div class="point" id="p12"><p class="event-text"></p></div>
+		<div class="point" id="p13"><p class="event-text"></p></div>
+		<div class="point point14" id="p14"><p class="event-text"></p></div>
+		
+	</div>
+	<div id="more-content" class="w3-modal">
+		<div class="w3-modal-content ">
+		<div class="controls">
+			<div class="add-event-btn">+ event</div>
+			<div class="add-goal-btn">+ goal</div>
+			<div class="remove-event-btn">- event</div>
+			<div class="remove-goal-btn">- goal</div>
+		</div>
+			<div class="point" id="p0">0</div>
+		<div class="point" id="p1">1</div>
+		<div class="point" id="p2">2</div>
+		<div class="point" id="p3">3</div>
+		<div class="point" id="p4">4</div>
+		<div class="point" id="p5">5</div>
+		<div class="point" id="p6">6</div>
+		<div class="point" id="p7">7</div>
+		<div class="point" id="p8">8</div>
+		<div class="point" id="p9">9</div>
+		<div class="point" id="p10">10</div>
+		<div class="point" id="p11">11</div>
+		<div class="point" id="p12">12</div>
+		<div class="point" id="p13">13</div>
+		<div class="point point14" id="p14">14</div>
+			<span onclick="document.getElementById('more-content').style.display='none'"
+      class="w3-button w3-display-topright">&times;</span>
+		</div>
+
+	</div>
+
+
+
+		<div class="w3-card  personal-info" id="info">
+			<div class="personal-info-head ">
+				<h1>اطلاعات شخصی</h1>
+		<p class="minimize" id="minim-info">remove</p>
+			</div>
+		<div class="info-content">
+			<h3 class="property-name" >نام:</h3>
+			<h3 class="property-value" id="username">نام کاربر</h3><br>
+			<h3 class="property-name" >تاریخ تولد:</h3>
+			<h3 class="property-value" id="username">25 خرداد 1378</h3><br>
+			<h3 class="property-name" id="educational-lable">سوابق تحصیلی</h3>
+			<h3 class="property-value" id="last-degree">آخرین مقطع ثبت شده</h3>
+			<ul class="degree-list">
+				<li class="degree-instance">مقطع تحصیلی</li><hr>
+				<li class="degree-instance">مقطع تحصیلی</li><hr>
+				<li class="degree-instance">مقطع تحصیلی</li><hr>
+				<li class="degree-instance">مقطع تحصیلی</li><hr>
+			</ul>
+		</div>
+
+
+
+
+		</div>
+		<div class="w3-card tastes" id="tastes">
+			<div class="tastes-head">
+				<h1>سلایق</h1>
+				<p class="minimize" id="minim-tastes">remove</p>
+			</div>
+			<p class="explanation-tastes">توضیحات مربوط به سلایق</p>
+				<div class="w3-tag tastes-content">سلیقه 1</div>
+				<div class="w3-tag tastes-content">سلیقه 2</div>
+				<div class="w3-tag tastes-content">سلیقه 3</div>
+				<div class="w3-tag tastes-content">سلیقه 4</div>
+				<div class="w3-tag tastes-content">سلیقه 5</div>
+				<div class="w3-tag tastes-content">سلیقه 6</div>
+
+
+		</div>
+
+
+	<div class="w3-card  skills" id="skl">
+		<div class="skills-head"><h1>مهارت ها</h1>
+		<p class="minimize" id="minim-skill">remove</p></div>
+		<div id="cntr">
+		<div class="skill-intstance">
+			<h3 class="skill-type">skill-type 1</h3>
+			<div class="skill-container">
+				<div class="skilled skl1"></div>
+			</div>
+		</div>
+		<div class="skill-intstance">
+			<h3 class="skill-type">skill-type 2</h3>
+			<div class="skill-container">
+				<div class="skilled skl2"></div>
+			</div>
+		</div>
+		<div class="skill-intstance">
+			<h3 class="skill-type">skill-type 3</h3>
+			<div class="skill-container">
+				<div class="skilled skl3"></div>
+			</div>
+		</div>
+		<div class="skill-intstance">
+			<h3 class="skill-type">skill-type 4</h3>
+			<div class="skill-container">
+				<div class="skilled skl4"></div>
+			</div>
+		</div>
+		<div class="skill-intstance">
+			<h3 class="skill-type">skill-type 5</h3>
+			<div class="skill-container">
+				<div class="skilled skl5"></div>
+			</div>
+		</div>
+		<div class="skill-intstance">
+			<h3 class="skill-type">skill-type 6</h3>
+			<div class="skill-container">
+				<div class="skilled skl6"></div>
+			</div>
+		</div>
+		</div>
+
+
+
+
+
+	</div>
+	</div>
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<script src="assets/js/public/jquery-3.1.1.min.js"></script>
+		<script src="assets/js/public/bootstrap.min.js"></script>	
+		<script src="assets/js/circles/main.js"></script>
+		<script src="assets/js/posts/main.js"></script>
+		<script src="assets/js/taskbar/main.js"></script>
+		<script src="assets/js/about/about.js"></script>
+		
+	</body>
+</html>

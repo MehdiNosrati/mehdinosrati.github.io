@@ -1,6 +1,7 @@
 function newPost() {
 	var height = $("#new-post-compose").css("height");
 	if (height == "0px") {
+		window.scrollTo(0, 0);
 		$("#new-post-compose").css("height", "400px");
 		$("#new-post-compose").css("outline", "6px solid #00b3b3");
 

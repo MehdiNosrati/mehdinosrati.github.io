@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>
+		ویرایش پروفایل
+	</title>
+	<link rel="stylesheet" href="assets/css/public/animate.css">
+	<link rel="stylesheet" href="assets/css/index_files/topbar&circles/top_bar_circles.css">
+	<link rel="stylesheet" href="assets/css/public/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/public/w3.css">
+	<link rel="stylesheet" href="assets/css/profile/about.css">
+	<link rel="stylesheet" href="assets/css/profile/edit-profile.css">
+	<link rel="stylesheet" href="assets/css/profile/profile.css">
+	<link rel="stylesheet" href="assets/css/index_files/left_taskbar/left_taskbar.css">
+	<link rel="stylesheet" href="assets/css/index_files/posts/pStyle.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/public/right_bar/right_bar.css">
+	<!--fonts-->
+	<link rel="stylesheet" href="assets/css/public/font/matertial-icons.css">
+	<link rel="stylesheet" href="assets/css/public/font/yekan.css">
+</head>
+
+<body>
+	<div class="circles animated fadeInDownBig">
+		<span class="circle">
+				<img src="assets/img/search.png" class="circle-icon search" onclick="funcGrow()">
+				<input type="search" name="search-box" class="search-box" id="grow">
+			</span>
+		<span class="circle"><img src="assets/img/trend.png" class="circle-icon"></span>
+		<span class="circle" id="notif">
+				<img src="assets/img/notification.png" class="circle-icon" onclick="funcNotif()" id="notification-icon">
+				<div id="notification">
+					<p class="arrow-up" id="arrow"></p>
+				</div>
+			</span>
+
+	</div>
+	<div class="top-bar animated fadeInDown">
+
+		<div class="material-icons" id="taskbar-btn" onclick="funcTask()" style="display: inline; font-size: 2em; padding: 0px 5px; background-color: #00ace6; border-radius: 5px; margin: 20px; margin-left: 10px; cursor: pointer; font-family: material-icons;">menu</div>
+
+
+		<div class="account">
+			<img src="assets/img/pp.png" class="pp">
+			<h4 class="pp-name" onclick="funcProf()">مهدی نصرتی</h4>
+			<div id="accounts">
+				<img src="assets/img/pp.png" class="pp-extend">
+				<h4 class="pp-name-extend">مهدی نصرتی</h4><br />
+				<img src="assets/img/pp.png" class="pp-extend">
+				<h4 class="pp-name-extend">آرمان رایان شریف </h4><br />
+				<img src="assets/img/pp.png" class="pp-extend">
+				<h4 class="pp-name-extend">دانشگاه امیرکبیر</h4><br />
+
+			</div>
+
+		</div>
+	</div>
+	<div class="profile-section row">
+		<div id="prof_top" class="prof-section-image">
+			<img src="assets/img/a4.jpg" class="img-circle circle-border m-b-md" alt="profile">
+
+		</div>
+		<button type="button" class="btn btn-w-m btn-link">amir mohammad rajaee</button>
+		<div class="prof-butt-conta">
+			<button id="#timeline" type="button" class="btn btn-w-m btn-default" onclick="showTimeLine()" style="margin:0 5px">Timeline
+        </button>
+			<button id="#relation" type="button" class="btn btn-w-m btn-default" onclick="showRelations()" style="margin:0 5px">Relations
+        </button>
+			<button id="#about" type="button" class="btn btn-w-m btn-default" style="margin:0 5px">About</button>
+			<button id="#editprofile" type="button" class="btn btn-w-m btn-default" style="margin:0 5px">Edit Profile
+        </button>
+			<button id="#more" type="button" class="btn btn-w-m btn-default" style="margin:0 10px">....</button>
+		</div>
+	</div>
+	
+	<!--right bar-->
+	<div class="right-bar-container animated fadeInRightBig">
+		<div class="btn-container" style="border-radius: 10px 0px 0px 0px;"><img src="assets/img/home.png" class="right-buttons">
+			<p class="hdn animatedr fadeInRight">home</p>
+		</div>
+		<a href="profile-about.html" class="right-bar-link"><div class="btn-container"><img src="assets/img/profile.png" class="right-buttons">
+			<p class="hdn animatedr fadeInRight">profile</p>
+		</div></a>
+		<div class="btn-container"><img src="assets/img/top.png" class="right-buttons">
+			<p class="hdn animatedr fadeInRight" style="padding-right: 10px;">Top 10</p>
+		</div>
+		<div class="btn-container" style="border-radius: 0px 0px 0px 10px;"><img src="assets/img/log-out.png" class="right-buttons">
+			<p class="hdn animatedr fadeInRight" style="padding-right: 10px; border: none;">Log out</p>
+		</div>
+	</div>
+	
+	
+	<!--task bar - left-->
+	<div class="task-bar-container animated fadeInLeft" id="taskbar">
+
+	</div>
+
+	<div class="w3-card w3-container main-panel">
+		<div class="edit-menu">
+			<div class="edit-menu-options">
+				<div class="menu-option" style="border-top: none; border-left: none" id="op1">اطلاعات شخصی</div>
+				<div class="menu-option" id="op2">مهارت ها</div>
+				<div class="menu-option" id="op3">سلایق</div>
+			</div>
+
+		</div>
+
+
+		<!-- personal info edit -->
+		<div class="personal-info-edit" id="pInfoEdit">
+			<div class="pp-change"></div>
+				<img src="assets/img/a4.jpg" class="pp-edit">
+				<input type="file" class="pp-choose">
+			
+			<table class="pi-edit-table">
+				<tr>
+					<td> <label class="property-edit">نام</label> </td>
+					<td> <input type="text" placeholder="previous name" class="input-edit"> </td>
+				</tr>
+				<tr>
+					<td> <label class="property-edit">نام کاربری</label> </td>
+					<td> <input type="text" placeholder="previous ID" class="input-edit"> </td>
+				</tr>
+				<tr>
+					<td> <label class="property-edit">تاریخ تولد</label> </td>
+					<td> <input type="date" class="input-edit"> </td>
+				</tr>
+				<tr>
+					<td> <label class="property-edit">ایمیل</label> </td>
+					<td> <input type="email" class="input-edit" style="text-align: left; direction: ltr;" placeholder="previous email"> </td>
+				</tr>
+			</table>
+			<div class="education-edit">
+				<ul class="edu-list" id="el">
+					<li>
+						<input type="text" id="add-edu" placeholder="افزودن مقطع تحصیلی"> <b id="add-education">add</b>
+					</li>
+					<!--<li>
+							مقطع تحصیلی1                      <b class="rmv">remove</b>
+						</li>
+						<li>
+							مقطع تحصیلی  2                    <b class="rmv">remove</b>
+						</li>
+						<li>
+							مقطع تحصیلی  3                    <b class="rmv">remove</b>
+						</li>
+						<li>
+							مقطع تحصیلی   4                   <b class="rmv">remove</b>
+						</li>
+						<li>
+							مقطع تحصیلی  3                    <b class="rmv">remove</b>
+						</li>
+						<li>
+							مقطع تحصیلی   4                   <b class="rmv">remove</b>
+						</li> -->
+				</ul>
+			</div>
+		</div>
+
+		<!--skills edit-->
+		<div class="skills-edit" id="skillEdit">
+			<h2>ویرایش مهارت ها</h2>
+			<div class="add-skill" id="addSkill" onclick="document.getElementById('more-content').style.display='block'">اضافه کردن</div>
+			<div id="more-content" class="w3-modal">
+				<div class="w3-modal-content ">
+					<h3 class="skill-name-add">نام مهارت</h3> <input type="text" class="skill-name-input" id="sklName">
+					<input type="range" min="0" max="100" style="width: 500px; margin: 50px; position: relative; top: 60px;" id="range">
+					<h2 class="add-skill-btn" id="addBtn" onclick="addsk()">اضافه کن</h2>
+					<span onclick="document.getElementById('more-content').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+				</div>
+			</div>
+
+			<div id="cntr">
+				<!--<div class="skill-intstance">
+			<h3 class="skill-type">skill-type 1</h3>
+			<div class="skill-container">
+				<div class="skilled skl1"></div>
+			</div><b class="del">backspace</b>
+		</div>
+		<div class="skill-intstance">
+			<h3 class="skill-type">skill-type 2</h3>
+			<div class="skill-container">
+				<div class="skilled skl2"></div>
+			</div><b class="del">backspace</b>
+		</div>
+		<div class="skill-intstance">
+			<h3 class="skill-type">skill-type 3</h3>
+			<div class="skill-container">
+				<div class="skilled skl3"></div>
+			</div><b class="del">backspace</b>
+		</div>
+		<div class="skill-intstance">
+			<h3 class="skill-type">skill-type 4</h3>
+			<div class="skill-container">
+				<div class="skilled skl4"></div>
+			</div><b class="del">backspace</b>
+		</div>
+		<div class="skill-intstance">
+			<h3 class="skill-type">skill-type 5</h3>
+			<div class="skill-container">
+				<div class="skilled skl5"></div>
+			</div><b class="del">backspace</b>
+		</div>
+		<div class="skill-intstance">
+			<h3 class="skill-type">skill-type 6</h3>
+			<div class="skill-container">
+				<div class="skilled skl6"></div>
+			</div><b class="del">backspace</b>
+		</div> -->
+			</div>
+		</div>
+
+		<!--tastes edit-->
+		<div class="tastes-edit" id="tastesEdit">
+			<h1>ویرایش سلایق</h1>
+			<h3 class="add-taste-title">افزودن سلیقه:</h3>
+			<input type="text" id="taste-input" placeholder="برای ثبت، enter را بفشارید">
+			<div class="tastes-container" id="tc">
+				<!--<div class="w3-tag w3-blue-gray w3-round taste">نمونه1 </div>
+				<div class="w3-tag w3-blue-gray w3-round taste">نمونه2</div>
+				<div class="w3-tag w3-blue-gray w3-round taste">نمونه3</div>
+				<div class="w3-tag w3-blue-gray w3-round taste">نمونه4</div>
+				<div class="w3-tag w3-blue-gray w3-round taste">نمونه5</div>
+				<div class="w3-tag w3-blue-gray w3-round taste">نمونه1 </div>
+				<div class="w3-tag w3-blue-gray w3-round taste">نمونه2</div>
+				<div class="w3-tag w3-blue-gray w3-round taste">نمونه3</div>
+				<div class="w3-tag w3-blue-gray w3-round taste">نمونه4</div>
+				<div class="w3-tag w3-blue-gray w3-round taste">نمونه5</div>-->
+
+			</div>
+		</div>
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<br><br><br><br><br><br>
+
+
+	<script src="assets/js/public/jquery-3.1.1.min.js"></script>
+	<script src="assets/js/public/bootstrap.min.js"></script>
+	<script src="assets/js/circles/main.js"></script>
+	<script src="assets/js/posts/main.js"></script>
+	<script src="assets/js/taskbar/main.js"></script>
+	<script src="assets/js/edit-profile/edit-profile.js"></script>
+</body>
+
+</html>

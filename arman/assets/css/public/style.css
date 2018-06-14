@@ -8635,3 +8635,27 @@ body {
 	transition: 1s;
 	border: 2px solid black;
 }
+
+
+::-webkit-scrollbar {
+	width: 6px;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
+	background: #ecf2f9;
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+	background: #336699;
+}
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+	background: #538cc6;
+
+}

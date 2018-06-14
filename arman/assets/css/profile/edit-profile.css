@@ -1,0 +1,391 @@
+.main-panel {
+	width: 80%;
+	height: 600px;
+	margin-left: 10%;
+	margin-top: 30px;
+	position: relative;
+	background-color: #800000;
+	background-image: url('bgpattern.png');
+	border-top: 2px solid #ccc;
+	border-left: 2px solid #ccc;
+	border-bottom: 2px solid #ccc;
+	border-right: 2px solid #800000;
+}
+
+.edit-menu {
+	position: absolute;
+	right: 0;
+	width: 25.5%;
+	height: 100%;
+	background-color: #e6f9ff;
+}
+
+.edit-menu-options {
+	line-height: 70px;
+	width: 100%;
+
+}
+
+.menu-option {
+	text-align: right;
+	padding-right: 20px;
+	cursor: pointer;
+	display: block;
+	font-size: 1.3 em;
+	position: relative;
+	width: 100%;
+	border-top: 2px solid #ccc;
+	border-right: 2px solid #ccc;
+	border-left: 2px solid #ccc;
+
+}
+
+#op1 {
+	background: #800000;
+	background-image: url('bgpattern.png');
+	color: #ffe6e6;
+}
+
+#op2 {
+	background: #806000;
+	background-image: url('bgpattern.png');
+	color: #fff9e6;
+}
+
+#op3 {
+	background: #004d00;
+	background-image: url('bgpattern.png');
+	color: #e6ffe6;
+}
+
+.pp-change {
+	border: 2px dashed #800000;
+	height: 240px;
+	border-radius: 10px;
+	width: 200px;
+	position: absolute;
+	left: 35px;
+	top: 20px;
+
+}
+
+.skills-edit,
+.tastes-edit {
+	display: none;
+}
+
+.personal-info-edit {
+	width: 75%;
+	height: 580px;
+	margin-top: 8px;
+	margin-left: -8px;
+	background-color: rgba(255, 230, 230, .9);
+	padding: 60px;
+	direction: rtl;
+	text-align: right;
+}
+
+.property-edit {
+	font-size: 1.3em;
+	margin-left: 2px;
+
+
+}
+
+.input-edit {
+	padding: 3px;
+	outline: none;
+	border: 1px groove #eee;
+	border-radius: 5px;
+	width: 100%;
+	font-size: 1.3em;
+	text-align: right;
+}
+
+.pi-edit-table tr,
+td {
+	height: 50px;
+
+}
+
+.pi-edit-table td:nth-child(even) {
+	width: 350px;
+}
+
+.pp-edit {
+	border-radius: 50%;
+	position: absolute;
+	left: 74px;
+	top: 40px;
+	transition: all .4s;
+
+}
+
+.pp-edit:hover {
+	box-shadow: 0px 0px 10px grey;
+
+}
+
+.pp-choose {
+
+	position: absolute;
+	left: -100px;
+	top: 200px;
+}
+
+.education-edit {
+	position: relative;
+	background-color: #d27979;
+	overflow-y: scroll;
+}
+
+.edu-list {
+	list-style: none;
+	margin-top: 15px;
+	border-radius: 5px;
+
+}
+
+.edu-list li {
+	padding: 10px;
+	border-left: 3px solid rgba(255, 230, 230, .9);
+	border-right: 6px solid rgba(255, 230, 230, .9);
+}
+.edu-list .edu-item{
+	color: rgba(255, 230, 230,.9);
+}
+
+
+.rmv {
+	font-family: material-icons;
+	position: absolute;
+	left: 35px;
+	cursor: pointer;
+}
+
+#add-edu {
+	width: 90%;
+	border-radius: 5px;
+	text-align: right;
+	border: none;
+	outline: none;
+	padding: 5px;
+
+}
+
+#add-education {
+	font-family: material-icons;
+	position: absolute;
+	left: 35px;
+	cursor: pointer;
+}
+
+.edu-list-style {
+	padding: 10px;
+	border-left: 3px solid #bbb;
+	border-right: 6px solid #bbb;
+	list-style: none;
+	direction: rtl;
+}
+
+.skills-edit {
+	width: 75%;
+	height: 580px;
+	margin-top: 8px;
+	margin-left: -8px;
+	background-color: #fff9e6;
+	padding: 60px;
+	direction: rtl;
+	text-align: right;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+.tastes-edit {
+	width: 75%;
+	height: 580px;
+	margin-top: 8px;
+	margin-left: -8px;
+	background-color: #e6ffe6;
+	padding: 60px;
+	direction: rtl;
+	text-align: right;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+.add-skill {
+	background-color: #997300;
+	padding: 10px;
+	display: inline;
+	position: relative;
+	z-index: 3;
+	border-radius: 5px;
+	right: 640px;
+	top: -30px;
+	cursor: pointer;
+	color: snow;
+	transition: all .2s;
+}
+
+.add-skill:hover {
+	box-shadow: 0px 0px 7px grey;
+}
+
+.skill-name-add {
+	position: relative;
+	top: 40px;
+	right: 100px;
+	color: #fff9e6;
+}
+
+.w3-modal-content {
+	height: 250px;
+	width: 600px;
+	background-color: #997300;
+	direction: ltr;
+}
+
+.skill-name-input {
+	position: absolute;
+	top: 35px;
+	right: 220px;
+	width: 300px;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+.add-skill-btn {
+	position: absolute;
+	bottom: 30px;
+	left: 50px;
+	background-color: #fff9e6;
+	border-radius: 5px;
+	font-size: 1.3em;
+	padding: 10px;
+	cursor: pointer;
+	color: #997300;
+}
+.skill-type{
+	color: #997300;
+}
+
+#cntr {
+	direction: ltr;
+	position: relative;
+	right: 100px;
+}
+
+.del {
+	position: relative;
+	font-family: material-icons;
+	left: 50px;
+	top: 8px;
+	cursor: pointer;
+	font-size: 1.5em;
+	color: #997300;
+}
+
+.tastes-container {
+	margin: 20px;
+	position: relative;
+	top: 100px;
+
+
+}
+
+.w3-tag {
+	margin: 10px 10px;
+}
+
+.rm {
+	font-family: material-icons;
+	position: relative;
+	top: 0px;
+	left: 20px;
+	background-color: rgb(96, 125, 139);
+	border-radius: 10px;
+	z-index: -1;
+	transition: all .5s;
+	cursor: pointer;
+
+}
+
+.taste::before {
+	content: 'clear';
+	font-family: material-icons;
+	z-index: 2;
+	margin: 5px;
+	background-color: cadetblue;
+	color: snow;
+	border-radius: 10px;
+	cursor: pointer;
+
+}
+
+.add-taste-title {
+	position: relative;
+	top: 50px;
+}
+
+#taste-input {
+	position: relative;
+	right: 200px;
+	top: 13px;
+	width: 300px;
+	padding: 10px;
+	font-size: 1.2em;
+	outline: none;
+	border: 1px solid cadetblue;
+	border-radius: 5px;
+
+}
+
+
+
+
+
+
+@media only screen and (max-width: 1300px) {
+	.pp-edit {
+		left: 80px;
+	}
+
+	.pi-edit-table td:nth-child(even) {
+		width: 300px;
+	}
+}
+
+@media only screen and (max-width: 1141px) {
+	.pi-edit-table td:nth-child(even) {
+		width: 250px;
+	}
+}
+
+@media only screen and (max-width: 1050px) {
+	.pp-edit {
+		position: relative;
+		margin: 0 auto;
+		top: -40px;
+		left: -150px;
+	}
+	.pp-choose {
+		position: relative;
+		margin: 0 auto;
+		top: -20px;
+		left: -60px;
+	}
+	.main-panel {
+		height: auto;
+	}
+	.personal-info-edit {
+		height: auto;
+	}
+	.pp-change {
+		left: 205px;
+		top: 18px;
+		height: 200px;
+	}
+}

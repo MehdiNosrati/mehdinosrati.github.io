@@ -7,6 +7,7 @@
 	top: 300px;
 	width: 55px;
 	right: 0;
+	z-index: 100;
 
 }
 .btn-container{
@@ -51,4 +52,20 @@
 	margin-top: 15px;
 	
 
+}
+a.right-bar-link{
+	background-color: inherit;
+	color: black;
+}
+a.right-bar-link:link{
+	text-decoration: none;
+}
+a.right-bar-link:visited{
+	text-decoration: none;
+}
+a.right-bar-link:hover{
+	text-decoration: none;
+}
+a.right-bar-link:active{
+	text-decoration: none;
 }

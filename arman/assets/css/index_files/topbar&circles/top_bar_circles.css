@@ -7,6 +7,7 @@
 	direction: ltr;
 	background-color: #0099cc;
 	background-image: url(bgpattern.png);
+	z-index: 20;
 }
 
 .material-icons {
@@ -21,6 +22,34 @@
 
 
 
+}
+.circles{
+	position: sticky;
+	top: 0px;
+	width: 430px;
+	margin: 0 41%;
+	z-index: 99;
+	
+}
+.circles4{
+	position: absolute;
+	top: 0px;
+	width: 430px;
+	margin: 0 38%;
+	z-index: 99;
+}
+@media only screen and (max-width: 1200px){
+	.circles4{
+		margin: 0 33%;
+	}
+}
+@media only screen and (max-width: 1100px){
+	.circles{
+		margin: 0 36%;
+	}
+	.circles4{
+		margin: 0 30%;
+	}
 }
 
 @-moz-document url-prefix() {
@@ -121,7 +150,7 @@
 }
 
 #accounts {
-	width: 250px;
+	width: 300px;
 	height: 0;
 	background-color: rgba(18, 160, 207, 1);
 	background-image: url(bgpattern.png);
@@ -141,7 +170,7 @@
 
 
 .account {
-	width: 250px;
+	width: 350px;
 	height: 70px;
 
 	position: absolute;
@@ -163,10 +192,11 @@
 }
 
 .pp-name {
-	display: inline-block;
+	display: inline;
 	margin: 0px 10px;
+
 	cursor: pointer;
-	font-size: 1.5em;
+	font-size: 1.3em;
 }
 
 .pp-extend {
@@ -179,6 +209,7 @@
 }
 
 .pp-name-extend {
+	width: 250px;
 	display: inline;
 	margin: 0px 10px;
 }
