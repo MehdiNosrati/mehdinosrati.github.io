@@ -1,0 +1,61 @@
+.menu{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100px;
+	background-color: snow;
+	z-index: 2;
+	
+	
+}
+.menu ul{
+	list-style-type: none;
+}
+.menu ul li{
+	margin: -0.2rem 18px;
+	font-size: 2rem;
+	color: #4A148C;
+	font-weight: 800;
+	text-align: center;
+	display: inline-block;
+	font-family: 'Titillium Web', sans-serif;
+	padding: 6px 20px 10px 20px;
+	transition: background-color .5s, color .5s, box-shadow .2s;
+	border-radius: 10px;
+	
+}
+.menu ul li:hover{
+	color: snow;
+	background: #4A148C;
+	box-shadow: 0px 0px 20px;
+}
+.intro{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #4A148C;
+}
+
+.exp{
+	position: absolute;
+	top: 100%;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	background-color: aqua;
+}
+.skl{
+	position: absolute;
+	top: 200%;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	background-color: cadetblue;
+}
