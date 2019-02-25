@@ -1,0 +1,33 @@
+body {
+    background: #C04848;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #480048, #C04848);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #480048, #C04848); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+h3{
+    display: block;
+    text-align: center;
+    color: snow;
+    font-size: 2rem;
+    background-color: #331112;
+    padding: 10px;
+    margin: 10px 30px;
+    border-radius: 4px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.5);
+}
+.last{
+    background-color: snow;
+    color: rgb(165, 127, 133);
+    animation: first 1s 0s infinite;
+    animation-timing-function: cubic-bezier(1,0.5,1,0.5);
+}
+@keyframes first{
+  from{
+      color: #176985;
+      background-color: #856917;
+  }
+  to{
+      color: snow;
+      background-color: #176985;
+  }
+}
+
