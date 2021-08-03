@@ -1,27 +1,236 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WIP</title>
-  <style>
-    body {
-      background-color: black;
-    }
-    .wip {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-family: monospace;
-      font-size: xx-large;
-      color: lightslategray;
-    }
-  </style>
-</head>
-<body>
-  <div class="wip">
-    WIP
-  </div>
-</body>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mehdi Nosrati | Software Engineer</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div id="mobile-menu-open" class="shadow-large">
+      <i class="fa fa-bars" aria-hidden="true"></i>
+    </div>
+    <!-- End #mobile-menu-toggle -->
+    <header>
+      <div id="mobile-menu-close">
+        <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
+      </div>
+      <ul id="menu" class="shadow">
+        <li>
+          <a href="#about">About</a>
+        </li>
+        <li>
+          <a href="#experience">Experience</a>
+        </li>
+        <li>
+          <a href="#projects">Projects</a>
+        </li>
+        <li>
+          <a href="#skills">Skills</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
+    </header>
+    <!-- End header -->
+
+    <div id="lead">
+      <div id="lead-content">
+        <h1>Mehdi Nosrati Sahlan</h1>
+        <h2>Software Engineer</h2>
+        <a href="#" class="btn-rounded-white">Download Resume</a>
+      </div>
+      <!-- End #lead-content -->
+
+      <div id="lead-overlay"></div>
+
+      <div id="lead-down">
+        <span>
+          <i class="fa fa-chevron-down" aria-hidden="true"></i>
+        </span>
+      </div>
+      <!-- End #lead-down -->
+    </div>
+    <!-- End #lead -->
+
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h2 class="heading">About Me</h2>
+          </div>
+          <div class="col-md-8">
+            <p>
+              Hi, my name is Mehdi. Learning new technologies is what I do for a
+              living. I have been in several departments of software development
+              and I enjoy writing solid Java and fun Javascript code. I enjoy it
+              so much that anyone around thinks I'm proactive.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End #about -->
+
+    <div id="experience" class="background-alt">
+      <h2 class="heading">Experience</h2>
+      <div id="experience-timeline">
+        <div data-date="July 2020 – July 2021">
+          <h3>Hospitad</h3>
+          <h4>Software Engineer</h4>
+          <p>
+            Hospitad is a data-focused start-up concerning the food industry
+            based in Stockholm. I provide the RESTful APIs in the Quarkus/Java
+            application and generate different types of reports from the
+            PostgreSQL database. Also for our new cross-platform mobile
+            application, I picked flutter, since it delivers better performance
+            than other cross-platform technologies and Dart is a better tool for
+            UI development compared to Javascript.
+          </p>
+        </div>
+
+        <div data-date="January 2019 – July 2020">
+          <h3>Hamsaa</h3>
+          <h4>Android Developer</h4>
+          <p>
+            Hamsaa is an enterprise communication platform. I initiated
+            migrating the android app codebase to Kotlin and Jetpack libraries.
+            Developing a full-feature instant messaging module using the latest
+            and the best of technologies of the time was my most important task.
+            I also reduced the package size of the android app by 60% after
+            multiple phases of refactoring.
+          </p>
+        </div>
+
+        <div data-date="January 2018 – January 2019">
+          <h3>Arman Rayan Sharif</h3>
+          <h4>Frontend Developer</h4>
+          <p>
+            Created a management dashboard for a code camp that our company was
+            doing in different universities.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- End #experience -->
+
+    <div id="projects" class="background-alt">
+      <h2 class="heading">Projects</h2>
+      <div class="container">
+        <div class="row">
+          <div class="project shadow-large">
+            <div class="project-image">
+              <img src="images/project.jpg" />
+            </div>
+            <!-- End .project-image -->
+            <div class="project-info">
+              <h3>Hamsaa Android Application</h3>
+              <h4>Java, Kotlin, Dagger, WebSockets</h4>
+              <p>
+                A communication platform for businesses. The real challenge was
+                building the chat section on top of the XMPP protocol in a very
+                limited period. Hamsaa is used by Saman Bank of Iran.
+              </p>
+              <a href="https://hamsaa.sb24.ir" target="_blank">View Project</a>
+            </div>
+            <!-- End .project-info -->
+          </div>
+          <!-- End .project -->
+
+          <div class="project shadow-large">
+            <div class="project-image">
+              <img src="images/project.jpg" />
+            </div>
+            <!-- End .project-image -->
+            <div class="project-info">
+              <h3>FourSquare Clone</h3>
+              <h4>Kotlin, Koin, Location Services, Navigation</h4>
+              <p>
+                A simple FourSquare clone which integrates its remote API,
+                listing places around with offline first and location based
+                revalidation.
+              </p>
+              <a href="https://gitlab.com/mehdinosrati/div-square" target="_blank">
+                View Project
+              </a>
+            </div>
+            <!-- End .project-info -->
+          </div>
+          <!-- End .project -->
+        </div>
+      </div>
+    </div>
+    <!-- End #projects -->
+
+    <div id="skills">
+      <h2 class="heading">Skills</h2>
+      <ul>
+        <li>Java</li>
+        <li>Kotlin</li>
+        <li>OOP/FP</li>
+        <li>SQL/Room</li>
+        <li>MVVM/Clean Arch</li>
+        <li>Android Architecture Components</li>
+        <li>Dagger/Koin</li>
+        <li>Testing</li>
+        <li>Problem Solving</li>
+        <li>Socket Programing</li>
+      </ul>
+    </div>
+    <!-- End #skills -->
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-5 copyright">
+            <p>Copyright &copy; 2020 Mehdi Nosrati Sahlan</p>
+          </div>
+          <div class="col-sm-2 top">
+            <span id="to-top">
+              <i class="fa fa-chevron-up" aria-hidden="true"></i>
+            </span>
+          </div>
+          <div class="col-sm-5 social">
+            <ul>
+              <li>
+                <a href="https://github.com/mehdinosrati" target="_blank"
+                  ><i class="fa fa-github" aria-hidden="true"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://stackoverflow.com/users/9720499/mehdi-nosrati" target="_blank"
+                  ><i class="fa fa-stack-overflow" aria-hidden="true"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/mehdinosratisahlan/" target="_blank"
+                  ><i class="fa fa-linkedin" aria-hidden="true"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://twitter.com/mns_txt" target="_blank"
+                  ><i class="fa fa-twitter" aria-hidden="true"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- End footer -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/scripts.min.js"></script>
+  </body>
 </html>
