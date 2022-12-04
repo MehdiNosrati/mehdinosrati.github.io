@@ -218,7 +218,7 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-5 copyright">
-            <p>Copyright &copy; 2022 Mahdi Nosrati Sahlan</p>
+            <p>Copyright &copy; <span id="year"></span> Mahdi Nosrati Sahlan</p>
             <p>Forked from <a href="https://github.com/RyanFitzgerald/devportfolio" target="_blank">DevPortfolio</a></p>
           </div>
           <div class="col-sm-2 top">
@@ -257,5 +257,10 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/scripts.min.js"></script>
+    <script>
+      window.onload = () => {
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+      }
+    </script>
   </body>
 </html>
