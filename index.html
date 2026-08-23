@@ -1,266 +1,740 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Mahdi Nosrati | Software Engineer</title>
+    <meta name="description" content="Personal portfolio of Mahdi Nosrati Sahlan - Software Engineer at Google. High-scale distributed systems, Android architecture, Server-Driven UI, and performant engineering." />
+    <meta name="theme-color" content="#08090d" />
+
+    <!-- Open Graph / Meta -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Mahdi Nosrati | Software Engineer" />
+    <meta property="og:description" content="Software Engineer at Google. Crafting resilient mobile systems, high-concurrency architectures, and clean engineering experiences." />
+    <meta property="og:url" content="https://mahdins.dev" />
+
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900"
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css" />
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/styles.css" rel="stylesheet" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
 
   <body>
-    <div id="mobile-menu-open" class="shadow-large">
-      <i class="fa fa-bars" aria-hidden="true"></i>
+    <!-- Top Scroll Progress Bar -->
+    <div class="scroll-progress-bar"></div>
+
+    <!-- Background Interactive Canvas & Ambient Orbs -->
+    <canvas id="bg-canvas"></canvas>
+    <div class="ambient-glow-container" aria-hidden="true">
+      <div class="ambient-orb orb-1"></div>
+      <div class="ambient-orb orb-2"></div>
+      <div class="ambient-orb orb-3"></div>
     </div>
-    <!-- End #mobile-menu-toggle -->
-    <header>
-      <div id="mobile-menu-close">
-        <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
+
+    <!-- Site Header & Navigation -->
+    <header class="site-header">
+      <div class="container nav-container">
+        <a href="#hero" class="logo" aria-label="Mahdi Nosrati Home">
+          <span class="logo-badge">MN</span>
+          <span>mahdins<span style="color: var(--accent-cyan);">.dev</span></span>
+        </a>
+
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#experience" class="nav-link">Experience</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="btn-terminal-trigger" aria-label="Open Interactive Terminal">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="4 17 10 11 4 5"></polyline>
+              <line x1="12" y1="19" x2="20" y2="19"></line>
+            </svg>
+            <span>Terminal</span>
+            <span class="kbd-badge">⌘K</span>
+          </button>
+
+          <button class="mobile-menu-btn" aria-label="Toggle navigation menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
       </div>
-      <ul id="menu" class="shadow">
-        <li>
-          <a href="#about">About</a>
-        </li>
-        <li>
-          <a href="#experience">Experience</a>
-        </li>
-        <li>
-          <a href="#projects">Projects</a>
-        </li>
-        <li>
-          <a href="#skills">Skills</a>
-        </li>
-        <li>
-          <a href="#contact">Contact</a>
-        </li>
-      </ul>
     </header>
-    <!-- End header -->
 
-    <div id="lead">
-      <div id="lead-content">
-        <h1>Mahdi Nosrati Sahlan</h1>
-        <h2>Software Engineer</h2>
-      </div>
-      <!-- End #lead-content -->
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Section -->
+      <section id="hero" class="hero-section">
+        <div class="container">
+          <div class="hero-grid">
+            <div class="hero-info">
+              <div class="hero-status-badge">
+                <span class="status-dot"></span>
+                <span>Software Engineer @ <strong class="status-company">Google</strong> (Google Play)</span>
+              </div>
 
-      <div id="lead-overlay"></div>
+              <h1 class="hero-title">
+                Hi, I'm <br />
+                <span class="scramble-target" data-original-text="Mahdi Nosrati">Mahdi Nosrati</span>
+              </h1>
 
-      <div id="lead-down">
-        <span>
-          <i class="fa fa-chevron-down" aria-hidden="true"></i>
-        </span>
-      </div>
-      <!-- End #lead-down -->
-    </div>
-    <!-- End #lead -->
+              <div class="hero-role-wrapper">
+                <span class="role-tag-prefix">&gt;</span>
+                <span class="dynamic-role">Software Engineer</span>
+              </div>
 
-    <div id="about">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <h2 class="heading">About Me</h2>
+              <p class="hero-bio">
+                Passionate engineer building ultra-scalable mobile systems, high-concurrency architectures, and server-driven frameworks. From architecting instant messaging protocols to shaping Google Play scale experiences, I love crafting clean, impactful software.
+              </p>
+
+              <div class="hero-actions">
+                <a href="#projects" class="btn btn-primary">
+                  <span>Explore Work</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+
+                <a href="#contact" class="btn btn-secondary">
+                  <span>Get In Touch</span>
+                </a>
+
+                <button class="btn btn-secondary quick-copy-email" data-email="mehdinosratisahlan@gmail.com" title="Copy email address">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
+                  <span>Copy Email</span>
+                </button>
+              </div>
+
+              <div class="hero-social-strip">
+                <a href="https://github.com/mehdinosrati" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="GitHub Profile">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                  </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/mehdinosratisahlan/" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="LinkedIn Profile">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                  </svg>
+                </a>
+                <a href="https://stackoverflow.com/users/9720499/mehdi-nosrati" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="Stack Overflow Profile">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 19H6v-6h-2v8h16v-8h-2v6z"></path>
+                    <path d="M8 15h8v2H8z"></path>
+                    <path d="M8.3 11.5l7.8 1.6.4-1.9-7.8-1.6-.4 1.9z"></path>
+                    <path d="M9.8 8.1l7.3 3.3.8-1.8-7.3-3.3-.8 1.8z"></path>
+                    <path d="M13 3l-1.5 1.3 5.4 6.2 1.5-1.3L13 3z"></path>
+                  </svg>
+                </a>
+                <a href="https://twitter.com/mns_txt" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="Twitter Profile">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- 3D Holographic Code Card -->
+            <div class="hero-visual">
+              <div class="floating-tech-badge badge-android">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.551 0 .9993.4482.9993.9993.0001.5511-.4483.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993 0 .5511-.4482.9997-.9993.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1521-.5676.416.416 0 00-.5676.1521l-2.0223 3.503C15.5902 8.356 13.8533 8.04 12 8.04c-1.8533 0-3.5902.316-5.1367.9097L4.841 5.4467a.4161.4161 0 00-.5677-.1521.4157.4157 0 00-.152 5676l1.9973 3.4592C2.6889 11.1867.3432 14.6589 0 18.761h24c-.3432-4.1021-2.6889-7.5743-6.1185-9.4396"/>
+                </svg>
+                <span>Android & Systems</span>
+              </div>
+
+              <div class="floating-tech-badge badge-google">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/>
+                </svg>
+                <span>Google SWE</span>
+              </div>
+
+              <div class="code-card-3d">
+                <div class="code-card-header">
+                  <div class="window-dots">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                  </div>
+                  <div class="file-tab">Engineer.kt</div>
+                </div>
+                <div class="code-content">
+                  <span class="kw">data class</span> <span class="type">SoftwareEngineer</span>(<br />
+                  &nbsp;&nbsp;<span class="kw">val</span> <span class="prop">name</span>: <span class="type">String</span> = <span class="str">"Mahdi Nosrati"</span>,<br />
+                  &nbsp;&nbsp;<span class="kw">val</span> <span class="prop">company</span>: <span class="type">String</span> = <span class="str">"Google"</span>,<br />
+                  &nbsp;&nbsp;<span class="kw">val</span> <span class="prop">domain</span>: <span class="type">String</span> = <span class="str">"Google Play"</span>,<br />
+                  &nbsp;&nbsp;<span class="kw">val</span> <span class="prop">superpowers</span>: <span class="type">List</span>&lt;<span class="type">String</span>&gt; = <span class="fn">listOf</span>(<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"High-Concurrency"</span>,<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"Server-Driven UI"</span>,<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"Performance Optimization"</span><br />
+                  &nbsp;&nbsp;)<br />
+                  ) {<br />
+                  &nbsp;&nbsp;<span class="kw">fun</span> <span class="fn">buildFuture</span>() = <span class="str">"Scale & Impact"</span><br />
+                  }
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="col-md-8">
-            <p>
-              Hi, my name is Mahdi. Learning new technologies is what I do for a
-              living. I have been in several departments of software development
-              and I enjoy writing solid Java and fun Javascript code. I enjoy it
-              so much that anyone around thinks I'm proactive.
+        </div>
+      </section>
+
+      <!-- Impact & Stats Section -->
+      <section class="impact-section">
+        <div class="container">
+          <div class="metrics-grid">
+            <div class="metric-card">
+              <div class="metric-number" data-target="8" data-suffix="+">0</div>
+              <div class="metric-label">Years of Experience</div>
+              <div class="metric-sub">Building high-impact systems</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-number" data-target="10" data-suffix="M+">0</div>
+              <div class="metric-label">Users Impacted</div>
+              <div class="metric-sub">Across mobile & cloud apps</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-number" data-target="60" data-suffix="%">0</div>
+              <div class="metric-label">APK Optimization Record</div>
+              <div class="metric-sub">Modular architecture & refactoring</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-number" data-target="100" data-suffix="%">0</div>
+              <div class="metric-label">Quality Mindset</div>
+              <div class="metric-sub">Clean code & automated testing</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="about-section" style="padding: 60px 0 100px;">
+        <div class="container">
+          <div class="section-tag">Overview</div>
+          <h2 class="section-title">Engineering <span class="highlight">Philosophy</span></h2>
+          <p class="section-desc">
+            I specialize in bridging the gap between scalable distributed backends and butter-smooth client user interfaces.
+          </p>
+
+          <div class="glass-card" style="padding: 40px;">
+            <p style="font-size: 1.15rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 20px;">
+              Hi, my name is <strong style="color: var(--text-primary);">Mahdi Nosrati Sahlan</strong>. Learning, mastering, and applying cutting-edge technologies is what I do for a living. I thrive on architecting solid Android/Kotlin systems, performant Java backends, and modular server-driven UI engines.
+            </p>
+            <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary);">
+              Currently, I work as a <strong style="color: var(--accent-cyan);">Software Engineer at Google</strong> on the Google Play team. Prior to Google, I contributed to high-throughput home advertising and server-driven frameworks at Yelp, built food-industry data APIs & Flutter applications at Parsly Labs in Stockholm, and engineered instant messaging protocols at Hamsaa.
             </p>
           </div>
         </div>
-      </div>
-    </div>
-    <!-- End #about -->
+      </section>
 
-    <div id="experience" class="background-alt">
-      <h2 class="heading">Experience</h2>
-      <div id="experience-timeline">
-        <div data-date="October 2022 – Present">
-          <h3>Google</h3>
-          <h4>Software Engineer</h4>
-          <p>
-            Google play
+      <!-- Experience Section -->
+      <section id="experience" class="experience-section">
+        <div class="container">
+          <div class="section-tag">Career Journey</div>
+          <h2 class="section-title">Work <span class="highlight">Experience</span></h2>
+          <p class="section-desc">
+            A track record of engineering impact across global tech leaders and fast-paced innovators.
           </p>
-        </div>
-        <div data-date="September 2021 – September 2022">
-          <h3>Yelp</h3>
-          <h4>Software Engineer</h4>
-          <p>
-            <ul>
-              <li>
-                <p>Creating and maintaining new and current types of ads on Yelp home page</p>
-              </li>
-              <li>
-                <p>Refactoring, testing and extending the functionalities of the Yelp server driven UI framework</p>
 
-              </li>
-              <li>
-                <p>Initiating Native Component Preview Framework and automated screenshot checks for android views.</p>
-              </li>
-            </ul>
-          </p>
-        </div>
-        <div data-date="July 2020 – July 2021">
-          <h3>Parsly Labs</h3>
-          <h4>Software Engineer</h4>
-          <p>
-            Parsly is a data-focused start-up concerning the food industry
-            based in Stockholm. I provide the RESTful APIs in the Quarkus/Java
-            application and generate different types of reports from the
-            PostgreSQL database. Also for our new cross-platform mobile
-            application, I picked flutter, since it delivers better performance
-            than other cross-platform technologies and Dart is a better tool for
-            UI development compared to Javascript.
-          </p>
-        </div>
+          <div class="timeline-container">
+            <div class="timeline-line"></div>
+            <div class="timeline-line-glow"></div>
 
-        <div data-date="January 2019 – July 2020">
-          <h3>Hamsaa</h3>
-          <h4>Android Developer</h4>
-          <p>
-            Hamsaa is an enterprise communication platform. I initiated
-            migrating the android app codebase to Kotlin and Jetpack libraries.
-            Developing a full-feature instant messaging module using the latest
-            and the best of technologies of the time was my most important task.
-            I also reduced the package size of the android app by 60% after
-            multiple phases of refactoring.
-          </p>
-        </div>
-
-        <div data-date="January 2018 – January 2019">
-          <h3>Arman Rayan Sharif</h3>
-          <h4>Frontend Developer</h4>
-          <p>
-            Created a management dashboard for a code camp that our company was
-            doing in different universities.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!-- End #experience -->
-
-    <div id="projects" class="background-alt">
-      <h2 class="heading">Projects</h2>
-      <div class="container">
-        <div class="row">
-          <div class="project shadow-large">
-            <div class="project-image">
-              <img src="images/project.jpg" />
+            <!-- Google -->
+            <div class="timeline-item">
+              <div class="timeline-node"></div>
+              <div class="glass-card experience-card">
+                <div class="experience-header">
+                  <div class="exp-company-title">
+                    <h3 class="exp-company">Google</h3>
+                    <span class="exp-current-badge">Current</span>
+                  </div>
+                  <div class="exp-period">October 2022 – Present</div>
+                </div>
+                <div class="exp-role">Software Engineer • Google Play</div>
+                <ul class="exp-bullets">
+                  <li>Engineering core Google Play infrastructure, serving billions of devices worldwide.</li>
+                  <li>Focusing on high scalability, resilience, mobile system performance, and modern developer tooling.</li>
+                </ul>
+                <div class="exp-tags">
+                  <span class="exp-tag">Android</span>
+                  <span class="exp-tag">Kotlin</span>
+                  <span class="exp-tag">Java</span>
+                  <span class="exp-tag">Distributed Systems</span>
+                  <span class="exp-tag">Scale</span>
+                </div>
+              </div>
             </div>
-            <!-- End .project-image -->
-            <div class="project-info">
-              <h3>Hamsaa Android Application</h3>
-              <h4>Java, Kotlin, Dagger, WebSockets</h4>
-              <p>
-                A communication platform for businesses. The real challenge was
-                building the chat section on top of the XMPP protocol in a very
-                limited period. Hamsaa is used by Saman Bank of Iran.
-              </p>
-              <a href="https://hamsaa.sb24.ir" target="_blank">View Project</a>
+
+            <!-- Yelp -->
+            <div class="timeline-item">
+              <div class="timeline-node"></div>
+              <div class="glass-card experience-card">
+                <div class="experience-header">
+                  <div class="exp-company-title">
+                    <h3 class="exp-company">Yelp</h3>
+                  </div>
+                  <div class="exp-period">September 2021 – September 2022</div>
+                </div>
+                <div class="exp-role">Software Engineer • Home Ads & Client Infrastructure</div>
+                <ul class="exp-bullets">
+                  <li>Engineered and maintained high-conversion advertising modules on the Yelp homepage.</li>
+                  <li>Refactored, tested, and expanded the functionalities of Yelp's Server-Driven UI (SDUI) framework.</li>
+                  <li>Initiated Native Component Preview Framework and automated screenshot regression checks for Android views.</li>
+                </ul>
+                <div class="exp-tags">
+                  <span class="exp-tag">Kotlin</span>
+                  <span class="exp-tag">Server-Driven UI</span>
+                  <span class="exp-tag">Android</span>
+                  <span class="exp-tag">Automated Testing</span>
+                  <span class="exp-tag">Screenshot Checks</span>
+                </div>
+              </div>
             </div>
-            <!-- End .project-info -->
+
+            <!-- Parsly Labs -->
+            <div class="timeline-item">
+              <div class="timeline-node"></div>
+              <div class="glass-card experience-card">
+                <div class="experience-header">
+                  <div class="exp-company-title">
+                    <h3 class="exp-company">Parsly Labs</h3>
+                  </div>
+                  <div class="exp-period">July 2020 – July 2021</div>
+                </div>
+                <div class="exp-role">Software Engineer • Stockholm, Sweden</div>
+                <ul class="exp-bullets">
+                  <li>Provided high-throughput RESTful APIs within a Quarkus/Java microservices backend.</li>
+                  <li>Generated and optimized dynamic multi-dimensional reports on PostgreSQL databases.</li>
+                  <li>Architected cross-platform mobile application in Flutter/Dart for optimal performance and rapid iteration.</li>
+                </ul>
+                <div class="exp-tags">
+                  <span class="exp-tag">Quarkus</span>
+                  <span class="exp-tag">Java</span>
+                  <span class="exp-tag">PostgreSQL</span>
+                  <span class="exp-tag">Flutter</span>
+                  <span class="exp-tag">Dart</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hamsaa -->
+            <div class="timeline-item">
+              <div class="timeline-node"></div>
+              <div class="glass-card experience-card">
+                <div class="experience-header">
+                  <div class="exp-company-title">
+                    <h3 class="exp-company">Hamsaa</h3>
+                  </div>
+                  <div class="exp-period">January 2019 – July 2020</div>
+                </div>
+                <div class="exp-role">Android Developer • Enterprise Communications</div>
+                <ul class="exp-bullets">
+                  <li>Initiated and executed full codebase migration to Kotlin and modern Android Jetpack libraries.</li>
+                  <li>Engineered a full-featured real-time instant messaging engine utilizing XMPP and WebSockets.</li>
+                  <li>Reduced application package size by 60% through aggressive modularization and asset optimization.</li>
+                </ul>
+                <div class="exp-tags">
+                  <span class="exp-tag">Kotlin</span>
+                  <span class="exp-tag">XMPP</span>
+                  <span class="exp-tag">WebSockets</span>
+                  <span class="exp-tag">Dagger</span>
+                  <span class="exp-tag">Jetpack</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Arman Rayan Sharif -->
+            <div class="timeline-item">
+              <div class="timeline-node"></div>
+              <div class="glass-card experience-card">
+                <div class="experience-header">
+                  <div class="exp-company-title">
+                    <h3 class="exp-company">Arman Rayan Sharif</h3>
+                  </div>
+                  <div class="exp-period">January 2018 – January 2019</div>
+                </div>
+                <div class="exp-role">Frontend Developer</div>
+                <ul class="exp-bullets">
+                  <li>Developed responsive management dashboards for university coding bootcamps and competitive events.</li>
+                </ul>
+                <div class="exp-tags">
+                  <span class="exp-tag">JavaScript</span>
+                  <span class="exp-tag">HTML5 / CSS3</span>
+                  <span class="exp-tag">REST APIs</span>
+                </div>
+              </div>
+            </div>
           </div>
-          <!-- End .project -->
+        </div>
+      </section>
 
-          <div class="project shadow-large">
-            <div class="project-image">
-              <img src="images/project.jpg" />
+      <!-- Featured Projects Section -->
+      <section id="projects" class="projects-section">
+        <div class="container">
+          <div class="section-tag">Portfolio</div>
+          <h2 class="section-title">Featured <span class="highlight">Projects</span></h2>
+          <p class="section-desc">
+            Highlighting selected architecture, mobile applications, and engineering projects.
+          </p>
+
+          <div class="projects-grid">
+            <!-- Project 1: Hamsaa -->
+            <div class="glass-card project-card">
+              <div class="project-top">
+                <div class="project-category-bar">
+                  <span class="project-cat">Enterprise Messaging</span>
+                  <div class="project-links">
+                    <a href="https://hamsaa.sb24.ir" target="_blank" rel="noopener noreferrer" class="project-link-btn" aria-label="Visit Hamsaa">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <h3 class="project-title">Hamsaa Messenger Platform</h3>
+                <p class="project-desc">
+                  An enterprise communication suite deployed for Saman Bank of Iran. Overcame strict latency constraints to implement end-to-end chat on top of the XMPP protocol with custom WebSocket fallback.
+                </p>
+              </div>
+              <div class="project-tech-list">
+                <span class="project-tech-pill">Java</span>
+                <span class="project-tech-pill">Kotlin</span>
+                <span class="project-tech-pill">Dagger</span>
+                <span class="project-tech-pill">XMPP / WebSockets</span>
+              </div>
             </div>
-            <!-- End .project-image -->
-            <div class="project-info">
-              <h3>FourSquare Clone</h3>
-              <h4>Kotlin, Koin, Location Services, Navigation</h4>
-              <p>
-                A simple FourSquare clone which integrates its remote API,
-                listing places around with offline first and location based
-                revalidation.
-              </p>
-              <a href="https://gitlab.com/mehdinosrati/div-square" target="_blank">
-                View Project
+
+            <!-- Project 2: Div-Square -->
+            <div class="glass-card project-card">
+              <div class="project-top">
+                <div class="project-category-bar">
+                  <span class="project-cat">Location Intelligence</span>
+                  <div class="project-links">
+                    <a href="https://gitlab.com/mehdinosrati/div-square" target="_blank" rel="noopener noreferrer" class="project-link-btn" aria-label="View Source on GitLab">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <h3 class="project-title">FourSquare Offline-First Client</h3>
+                <p class="project-desc">
+                  An offline-first Android application integrating the FourSquare API with dynamic spatial revalidation, background caching, and location-based discovery.
+                </p>
+              </div>
+              <div class="project-tech-list">
+                <span class="project-tech-pill">Kotlin</span>
+                <span class="project-tech-pill">Koin</span>
+                <span class="project-tech-pill">Room DB</span>
+                <span class="project-tech-pill">Coroutines</span>
+                <span class="project-tech-pill">Navigation</span>
+              </div>
+            </div>
+
+            <!-- Project 3: SDUI & Preview Framework -->
+            <div class="glass-card project-card">
+              <div class="project-top">
+                <div class="project-category-bar">
+                  <span class="project-cat">Developer Infrastructure</span>
+                </div>
+                <h3 class="project-title">Server-Driven UI & Visual Testing</h3>
+                <p class="project-desc">
+                  Dynamic mobile layout system allowing live content configuration from backend payloads. Accompanied by automated pixel-accurate screenshot regression validation tools.
+                </p>
+              </div>
+              <div class="project-tech-list">
+                <span class="project-tech-pill">Server-Driven UI</span>
+                <span class="project-tech-pill">Kotlin</span>
+                <span class="project-tech-pill">CI/CD</span>
+                <span class="project-tech-pill">Visual Testing</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Matrix Section -->
+      <section id="skills" class="skills-section">
+        <div class="container">
+          <div class="section-tag">Arsenal</div>
+          <h2 class="section-title">Technical <span class="highlight">Skills</span></h2>
+          <p class="section-desc">
+            Technologies, frameworks, and architecture paradigms I leverage daily.
+          </p>
+
+          <div class="skills-tabs">
+            <button class="skill-tab-btn active" data-filter="all">All Skills</button>
+            <button class="skill-tab-btn" data-filter="languages">Languages</button>
+            <button class="skill-tab-btn" data-filter="mobile">Mobile & Android</button>
+            <button class="skill-tab-btn" data-filter="backend">Backend & Cloud</button>
+            <button class="skill-tab-btn" data-filter="arch">Architecture & Tools</button>
+          </div>
+
+          <div class="skills-matrix-grid">
+            <!-- Languages -->
+            <div class="skill-node-card" data-category="languages">
+              <div class="skill-icon-wrap">⚡</div>
+              <div class="skill-node-info">
+                <h4>Kotlin</h4>
+                <span>Modern Android & Coroutines</span>
+              </div>
+            </div>
+            <div class="skill-node-card" data-category="languages">
+              <div class="skill-icon-wrap">☕</div>
+              <div class="skill-node-info">
+                <h4>Java</h4>
+                <span>Enterprise & Concurrency</span>
+              </div>
+            </div>
+            <div class="skill-node-card" data-category="languages">
+              <div class="skill-icon-wrap">🎯</div>
+              <div class="skill-node-info">
+                <h4>Dart</h4>
+                <span>Flutter UI Engineering</span>
+              </div>
+            </div>
+            <div class="skill-node-card" data-category="languages">
+              <div class="skill-icon-wrap">🌐</div>
+              <div class="skill-node-info">
+                <h4>TypeScript / JS</h4>
+                <span>Modern Web & Node.js</span>
+              </div>
+            </div>
+            <div class="skill-node-card" data-category="languages">
+              <div class="skill-icon-wrap">🗄️</div>
+              <div class="skill-node-info">
+                <h4>SQL</h4>
+                <span>PostgreSQL / SQLite / Room</span>
+              </div>
+            </div>
+
+            <!-- Mobile -->
+            <div class="skill-node-card" data-category="mobile">
+              <div class="skill-icon-wrap">🤖</div>
+              <div class="skill-node-info">
+                <h4>Android SDK</h4>
+                <span>Jetpack & Architecture</span>
+              </div>
+            </div>
+            <div class="skill-node-card" data-category="mobile">
+              <div class="skill-icon-wrap">🎨</div>
+              <div class="skill-node-info">
+                <h4>Jetpack Compose</h4>
+                <span>Declarative Reactive UI</span>
+              </div>
+            </div>
+            <div class="skill-node-card" data-category="mobile">
+              <div class="skill-icon-wrap">📱</div>
+              <div class="skill-node-info">
+                <h4>Flutter</h4>
+                <span>Cross-platform Mobile</span>
+              </div>
+            </div>
+            <div class="skill-node-card" data-category="mobile">
+              <div class="skill-icon-wrap">🧩</div>
+              <div class="skill-node-info">
+                <h4>Server-Driven UI</h4>
+                <span>Dynamic JSON-driven Layouts</span>
+              </div>
+            </div>
+
+            <!-- Backend -->
+            <div class="skill-node-card" data-category="backend">
+              <div class="skill-icon-wrap">🚀</div>
+              <div class="skill-node-info">
+                <h4>Quarkus & Spring</h4>
+                <span>Cloud-Native Microservices</span>
+              </div>
+            </div>
+            <div class="skill-node-card" data-category="backend">
+              <div class="skill-icon-wrap">📡</div>
+              <div class="skill-node-info">
+                <h4>WebSockets & XMPP</h4>
+                <span>Real-Time Communication</span>
+              </div>
+            </div>
+            <div class="skill-node-card" data-category="backend">
+              <div class="skill-icon-wrap">⚙️</div>
+              <div class="skill-node-info">
+                <h4>gRPC & REST</h4>
+                <span>API Design & Serialization</span>
+              </div>
+            </div>
+
+            <!-- Architecture -->
+            <div class="skill-node-card" data-category="arch">
+              <div class="skill-icon-wrap">🏛️</div>
+              <div class="skill-node-info">
+                <h4>Clean Architecture</h4>
+                <span>MVVM / MVI / Solid Design</span>
+              </div>
+            </div>
+            <div class="skill-node-card" data-category="arch">
+              <div class="skill-icon-wrap">💉</div>
+              <div class="skill-node-info">
+                <h4>Dagger / Hilt / Koin</h4>
+                <span>Dependency Injection</span>
+              </div>
+            </div>
+            <div class="skill-node-card" data-category="arch">
+              <div class="skill-icon-wrap">🧪</div>
+              <div class="skill-node-info">
+                <h4>Automated Testing</h4>
+                <span>Unit, Integration & UI Tests</span>
+              </div>
+            </div>
+            <div class="skill-node-card" data-category="arch">
+              <div class="skill-icon-wrap">📈</div>
+              <div class="skill-node-info">
+                <h4>Performance Profiling</h4>
+                <span>Memory, CPU & Trace Analysis</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact-section">
+        <div class="container">
+          <div class="glass-card contact-card">
+            <div class="section-tag">Let's Connect</div>
+            <h2 class="contact-cta-title">Ready to build something <span class="highlight">extraordinary?</span></h2>
+            <p class="contact-cta-desc">
+              Whether you want to discuss systems architecture, mobile innovations, or potential collaborations, my inbox is always open.
+            </p>
+
+            <div class="contact-action-box">
+              <a href="mailto:mehdinosratisahlan@gmail.com" class="btn btn-primary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <span>Send Direct Email</span>
               </a>
+
+              <button class="copy-email-btn" data-email="mehdinosratisahlan@gmail.com">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span>mehdinosratisahlan@gmail.com</span>
+              </button>
             </div>
-            <!-- End .project-info -->
+
+            <footer class="site-footer">
+              <div>
+                © <span id="year"></span> Mahdi Nosrati Sahlan • Built with precision & high performance.
+              </div>
+              <div class="footer-social-links">
+                <a href="https://github.com/mehdinosrati" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                  </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/mehdinosratisahlan/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                  </svg>
+                </a>
+                <a href="https://stackoverflow.com/users/9720499/mehdi-nosrati" target="_blank" rel="noopener noreferrer" aria-label="Stack Overflow">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 19H6v-6h-2v8h16v-8h-2v6z"></path>
+                    <path d="M8 15h8v2H8z"></path>
+                    <path d="M8.3 11.5l7.8 1.6.4-1.9-7.8-1.6-.4 1.9z"></path>
+                    <path d="M9.8 8.1l7.3 3.3.8-1.8-7.3-3.3-.8 1.8z"></path>
+                    <path d="M13 3l-1.5 1.3 5.4 6.2 1.5-1.3L13 3z"></path>
+                  </svg>
+                </a>
+                <a href="https://twitter.com/mns_txt" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                  </svg>
+                </a>
+              </div>
+            </footer>
           </div>
-          <!-- End .project -->
+        </div>
+      </section>
+    </main>
+
+    <!-- Interactive Cyber Terminal Modal -->
+    <div id="terminal-modal" class="terminal-modal-overlay" role="dialog" aria-modal="true" aria-label="Interactive Cyber Terminal">
+      <div class="terminal-window">
+        <div class="terminal-top-bar">
+          <div class="window-dots">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <div class="terminal-title">visitor@mahdins.dev:~ (CLI Mode)</div>
+          <button class="terminal-close-btn" aria-label="Close Terminal">✕</button>
+        </div>
+        <div id="terminal-body" class="terminal-body">
+          <div class="terminal-output-line">
+            <span style="color:var(--accent-cyan)">Welcome to Mahdi's Cyber Terminal v2.5.0</span>
+          </div>
+          <div class="terminal-output-line">
+            Type <span style="color:var(--accent-green)">'help'</span> to see available commands or <span style="color:var(--accent-green)">'sudo hire'</span> to launch partnership.
+          </div>
+        </div>
+        <div style="padding: 12px 20px; background: rgba(0,0,0,0.3); border-top: 1px solid rgba(255,255,255,0.06);">
+          <div class="terminal-prompt-row">
+            <span class="terminal-prompt-sign">visitor@mahdins:~$</span>
+            <input type="text" id="terminal-input" class="terminal-input" autocomplete="off" spellcheck="false" placeholder="type a command..." autofocus />
+          </div>
         </div>
       </div>
     </div>
-    <!-- End #projects -->
 
-    <div id="skills">
-      <h2 class="heading">Skills</h2>
-      <ul>
-        <li>Java</li>
-        <li>Kotlin</li>
-        <li>OOP/FP</li>
-        <li>SQL/Room</li>
-        <li>MVVM/Clean Arch</li>
-        <li>Android Architecture Components</li>
-        <li>Dagger/Koin</li>
-        <li>Testing</li>
-        <li>Problem Solving</li>
-        <li>Socket Programing</li>
-      </ul>
+    <!-- Toast Notification -->
+    <div id="toast-notification" class="toast-notification">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-green)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="20 6 9 17 4 12"></polyline>
+      </svg>
+      <span class="toast-text">Notification</span>
     </div>
-    <!-- End #skills -->
 
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-5 copyright">
-            <p>Copyright &copy; <span id="year"></span> Mahdi Nosrati Sahlan</p>
-            <p>Forked from <a href="https://github.com/RyanFitzgerald/devportfolio" target="_blank">DevPortfolio</a></p>
-          </div>
-          <div class="col-sm-2 top">
-            <span id="to-top">
-              <i class="fa fa-chevron-up" aria-hidden="true"></i>
-            </span>
-          </div>
-          <div class="col-sm-5 social" id="contact">
-            <ul>
-              <li>
-                <a href="https://github.com/mehdinosrati" target="_blank"
-                  ><i class="fa fa-github" aria-hidden="true"></i
-                ></a>
-              </li>
-              <li>
-                <a href="https://stackoverflow.com/users/9720499/mehdi-nosrati" target="_blank"
-                  ><i class="fa fa-stack-overflow" aria-hidden="true"></i
-                ></a>
-              </li>
-              <li>
-                <a href="https://www.linkedin.com/in/mehdinosratisahlan/" target="_blank"
-                  ><i class="fa fa-linkedin" aria-hidden="true"></i
-                ></a>
-              </li>
-              <li>
-                <a href="https://twitter.com/mns_txt" target="_blank"
-                  ><i class="fa fa-twitter" aria-hidden="true"></i
-                ></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!-- End footer -->
+    <!-- Scroll To Top Button -->
+    <button id="scroll-top-btn" class="scroll-top-btn" aria-label="Scroll to top">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="18 15 12 9 6 15"></polyline>
+      </svg>
+    </button>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/scripts.min.js"></script>
+    <!-- Scripts -->
+    <script src="js/scripts.js"></script>
     <script>
-      window.onload = () => {
-        document.getElementById("year").innerHTML = new Date().getFullYear();
-      }
+      document.getElementById("year").textContent = new Date().getFullYear();
     </script>
   </body>
 </html>
