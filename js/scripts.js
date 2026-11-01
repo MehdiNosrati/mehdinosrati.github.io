@@ -1,97 +1,101 @@
-/*!
-    Title: Dev Portfolio Template
-    Version: 1.2.2
-    Last Change: 03/25/2020
-    Author: Ryan Fitzgerald
-    Repo: https://github.com/RyanFitzgerald/devportfolio-template
-    Issues: https://github.com/RyanFitzgerald/devportfolio-template/issues
+(() => {
+  // 1. Dynamic copyright year
+  const yearEl = document.getElementById("year");
+  if (yearEl) {
+    yearEl.textContent = String(new Date().getFullYear());
+  }
 
-    Description: This file contains all the scripts associated with the single-page
-    portfolio website.
-*/
+  // 2. Two-state theme toggle (System default vs explicit override)
+  const metaScheme = document.querySelector('meta[name="color-scheme"]');
+  const themeToggle = document.getElementById("theme-toggle");
 
-(function($) {
+  const getStoredScheme = () => {
+    try {
+      const val = localStorage.getItem("color-scheme");
+      return val === "light" || val === "dark" ? val : null;
+    } catch {
+      return null;
+    }
+  };
 
-    // Remove no-js class
-    $('html').removeClass('no-js');
+  const getSystemScheme = () =>
+    window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
 
-    // Animate to section when nav is clicked
-    $('header a').click(function(e) {
+  const applySchemeMeta = (scheme) => {
+    if (metaScheme) {
+      metaScheme.content = scheme ?? "light dark";
+    }
+  };
 
-        // Treat as normal link if no-scroll class
-        if ($(this).hasClass('no-scroll')) return;
+  if (themeToggle && metaScheme) {
+    themeToggle.addEventListener("click", () => {
+      const currentMeta = metaScheme.content;
+      const currentRendered =
+        currentMeta === "light" || currentMeta === "dark"
+          ? currentMeta
+          : getStoredScheme() ?? getSystemScheme();
 
-        e.preventDefault();
-        var heading = $(this).attr('href');
-        var scrollDistance = $(heading).offset().top;
+      const target = currentRendered === "dark" ? "light" : "dark";
+      const system = getSystemScheme();
 
-        $('html, body').animate({
-            scrollTop: scrollDistance + 'px'
-        }, Math.abs(window.pageYOffset - $(heading).offset().top) / 1);
-
-        // Hide the menu once clicked if mobile
-        if ($('header').hasClass('active')) {
-            $('header, body').removeClass('active');
-        }
+      if (target !== system) {
+        try {
+          localStorage.setItem("color-scheme", target);
+        } catch {}
+        applySchemeMeta(target);
+      } else {
+        try {
+          localStorage.removeItem("color-scheme");
+        } catch {}
+        applySchemeMeta(null);
+      }
     });
 
-    // Scroll to top
-    $('#to-top').click(function() {
-        $('html, body').animate({
-            scrollTop: 0
-        }, 500);
+    window.addEventListener("storage", (e) => {
+      if (e.key === "color-scheme") {
+        const next = e.newValue === "light" || e.newValue === "dark" ? e.newValue : null;
+        applySchemeMeta(next);
+      }
+    });
+  }
+
+  // 3. Mobile navigation menu
+  const menuBtn = document.getElementById("mobile-menu-open");
+  const siteNav = document.querySelector(".site-nav");
+
+  const closeMenu = () => {
+    if (!menuBtn || !siteNav) return;
+    siteNav.classList.remove("active");
+    menuBtn.setAttribute("aria-expanded", "false");
+  };
+
+  if (menuBtn && siteNav) {
+    menuBtn.addEventListener("click", () => {
+      const isOpen = siteNav.classList.toggle("active");
+      menuBtn.setAttribute("aria-expanded", String(isOpen));
     });
 
-    // Scroll to first element
-    $('#lead-down span').click(function() {
-        var scrollDistance = $('#lead').next().offset().top;
-        $('html, body').animate({
-            scrollTop: scrollDistance + 'px'
-        }, 500);
+    siteNav.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => closeMenu());
     });
 
-    // Create timeline
-    $('#experience-timeline').each(function() {
-
-        $this = $(this); // Store reference to this
-        $userContent = $this.children('div'); // user content
-
-        // Create each timeline block
-        $userContent.each(function() {
-            $(this).addClass('vtimeline-content').wrap('<div class="vtimeline-point"><div class="vtimeline-block"></div></div>');
-        });
-
-        // Add icons to each block
-        $this.find('.vtimeline-point').each(function() {
-            $(this).prepend('<div class="vtimeline-icon"><i class="fa fa-map-marker"></i></div>');
-        });
-
-        // Add dates to the timeline if exists
-        $this.find('.vtimeline-content').each(function() {
-            var date = $(this).data('date');
-            if (date) { // Prepend if exists
-                $(this).parent().prepend('<span class="vtimeline-date">'+date+'</span>');
-            }
-        });
-
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && siteNav.classList.contains("active")) {
+        closeMenu();
+        menuBtn.focus();
+      }
     });
+  }
 
-    // Open mobile menu
-    $('#mobile-menu-open').click(function() {
-        $('header, body').addClass('active');
+  // 4. Back to top button
+  const toTopBtn = document.getElementById("to-top");
+  if (toTopBtn) {
+    toTopBtn.addEventListener("click", () => {
+      const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      window.scrollTo({
+        top: 0,
+        behavior: reducedMotion ? "auto" : "smooth",
+      });
     });
-
-    // Close mobile menu
-    $('#mobile-menu-close').click(function() {
-        $('header, body').removeClass('active');
-    });
-
-    // Load additional projects
-    $('#view-more-projects').click(function(e){
-        e.preventDefault();
-        $(this).fadeOut(300, function() {
-            $('#more-projects').fadeIn(300);
-        });
-    });
-
-})(jQuery);
+  }
+})();
