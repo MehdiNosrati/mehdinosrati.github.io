@@ -292,13 +292,14 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    inline-size: 2rem;
+    min-inline-size: 2.35rem;
     block-size: 2rem;
+    padding-inline: 0.45rem;
     border-radius: var(--radius-sm);
     background-color: var(--brand);
     color: #ffffff;
     font-family: var(--font-mono);
-    font-size: 0.75rem;
+    font-size: 0.72rem;
     font-weight: 600;
     letter-spacing: 0.04em;
     transition: background-color 0.15s ease;
@@ -755,6 +756,16 @@
   .project-visual-pand .visual-badge {
     border-color: var(--brand-border);
     color: var(--brand);
+  }
+
+  .visual-badge-icon {
+    padding: 0.65rem;
+    color: var(--brand);
+
+    svg {
+      inline-size: 1.75rem;
+      block-size: 1.75rem;
+    }
   }
 
   .visual-stack {
